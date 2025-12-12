@@ -4,39 +4,149 @@
 
 ### *Sovereign Signal Station | Frequency Liberation Network*
 
-<img src="https://raw.githubusercontent.com/heyns1000/baobab-bush-portal/main/assets/baobab-landscape.png" alt="Baobab Portal in the Wild" width="800"/>
+<table>
+<tr>
+<td width="50%" align="center">
 
-> *"From here to Timbuktu - connecting voices across the digital forest canopy"*
+### 🎭 The Portrait Gallery
 
-[![Version](https://img.shields.io/badge/trunk-vs111.111-orange?style=for-the-badge)](https://github.com/heyns1000/baobab-bush-portal)
+<img src="https://i.postimg.cc/tCKq9YXK/samfox-tshirt.jpg" alt="SamFox T-Shirt Design - The Classic Ice Lolly" width="100%" style="border: 8px solid #f59e0b; border-radius: 12px; box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);"/>
+
+**🍦 THE CLASSIC ICE LOLLY**
+*Master SamFox Design | Spotify Edition*
+
+**Cultural Elements:**
+- 🎨 Traditional African patterns
+- 💰 Mzansi money motifs
+- 🌅 Golden halo of sovereignty
+- 📻 VaultPulse signal active
+
+</td>
+<td width="50%" align="center">
+
+### 🌍 The Landscape
+
+<img src="https://i.postimg.cc/KvFQZ5nN/baobab-landscape.jpg" alt="Baobab Portal in the African Savanna" width="100%" style="border: 8px solid #d97706; border-radius: 12px; box-shadow: 0 8px 24px rgba(217, 119, 6, 0.4);"/>
+
+**🌳 PORTAL IN THE WILD**
+*African Savanna Installation*
+
+**Setting:**
+- 🦒 Natural baobab canopy
+- 🌾 Golden grasslands
+- ☀️ Sacred frequency transmission
+- 🎙️ From here to Timbuktu
+
+</td>
+</tr>
+</table>
+
+> *"In this digital forest, we broadcast without permission, transmit without borders"*
+
+[![Version](https://img.shields.io/badge/trunk-vs111.111-orange?style=for-the-badge&logo=spotify)](https://github.com/heyns1000/baobab-bush-portal)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![React](https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react)](https://reactjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
-[![Express](https://img.shields.io/badge/Express-4.21-000000?style=for-the-badge&logo=express)](https://expressjs.com)
+[![Live](https://img.shields.io/badge/VaultPulse-●●●●●-brightgreen?style=for-the-badge)](https://github.com/heyns1000/baobab-bush-portal)
 
 ---
 
 </div>
 
-## 🎭 SamFox Design Philosophy
+## 🎭 Master SamFox Design Philosophy
+
+<table>
+<tr>
+<td width="30%" align="center" valign="top">
+<img src="https://i.postimg.cc/tCKq9YXK/samfox-tshirt.jpg" width="250" style="border: 4px solid #fbbf24; border-radius: 8px;"/><br/>
+<b>Ice Lolly Iconography</b>
+</td>
+<td width="70%" valign="top">
+
+### 🍦 The SamFox Collection
+
+**Master SamFox** brings cultural fusion to digital storytelling through iconic character design:
+
+- **🎨 Cultural Patterns**: Traditional African textiles meet modern pop art
+- **💰 Mzansi Money**: Currency motifs representing economic storytelling
+- **🌅 Golden Halo**: The sovereign frequency - broadcasting without permission
+- **😊 Joyful Expression**: The warmth and resilience of African storytelling
+- **📻 Signal Transmission**: From Cape Town to Cairo, Joburg to Timbuktu
+
+> *"Sweet, refreshing narratives from the African continent - served cold, shared warm"*
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🌍 Portal Installation in the Wild
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/heyns1000/baobab-bush-portal/main/assets/samfox-tshirt.png" alt="SamFox T-Shirt Design" width="400"/>
+<img src="https://i.postimg.cc/KvFQZ5nN/baobab-landscape.jpg" alt="Portal in Natural Habitat" width="800" style="border: 10px solid #92400e; border-radius: 16px; box-shadow: 0 12px 48px rgba(146, 64, 14, 0.5);"/>
 
-*The iconic SamFox ice lolly character - a symbol of cultural fusion and digital storytelling*
+### 🌳 The Sacred Baobab Installation
+
+*Set between ancient baobabs in the African savanna, the portal connects physical and digital realms*
+
 </div>
 
-**Master SamFox Designs** represent the heart of our platform:
-- 🍦 **Ice Lolly Storytelling** - Sweet, refreshing narratives from the African continent
-- 🎨 **Cultural Iconography** - Blending traditional art with modern digital expression
-- 🌍 **From Mzansi to Timbuktu** - Connecting stories across borders
-- 📻 **Sovereign Frequencies** - Broadcasting without permission, transmitting without borders
+<table>
+<tr>
+<td width="50%">
+
+### 🌾 Natural Elements
+- Ancient Baobab trees (1000+ years)
+- Golden grassland ecosystem
+- Clear African sky
+- Wildlife corridors
+- Ancestral transmission grounds
+
+</td>
+<td width="50%">
+
+### 📡 Digital Integration
+- Sovereign frequency broadcasting
+- Tree house network node
+- Community gathering space
+- Cultural exchange portal
+- Story transmission hub
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🌟 What is Baobab Bush Portal?
 
-A **unified fullstack application** merging the rich features of **BaobabTree** with the sovereign broadcasting aesthetic of **BushPortal**. This platform creates digital tree houses where podcasters, storytellers, and communities gather to share authentic voices.
+A **unified fullstack application** that merges digital podcasting infrastructure with cultural storytelling traditions. Imagine a network of **digital tree houses** scattered across Africa and beyond, each one a portal where voices gather, stories flow, and communities connect.
+
+<div align="center">
+
+```
+                    🍃
+                   🌿 🍃 🌿
+                  🍃  🌳  🍃
+                 🌿    |    🌿
+                🍃     |     🍃
+               🌿      |      🌿
+              🍃       |       🍃
+                 \     |     /
+                  \    |    /
+                   \   |   /
+                    \  |  /
+                     \ | /
+                      \|/
+                   ═══════════
+                  🌿 ROOT ZONE 🌿
+
+      Deep roots anchor sovereign frequencies
+      Ancient wisdom guides modern transmission
+```
+
+</div>
 
 ### 🎯 Core Features
 
@@ -45,42 +155,33 @@ A **unified fullstack application** merging the rich features of **BaobabTree** 
 <td width="50%">
 
 #### 🏠 Digital Tree Houses
-- Global network of podcast studios
-- Real-time occupancy tracking
-- Community-driven spaces
-- From South Africa to Timbuktu
-
-</td>
-<td width="50%">
+- **Global Network**: From Joburg to Timbuktu
+- **Real-time Occupancy**: Live listener tracking
+- **Community Spaces**: Cultural exchange hubs
+- **Geographic Discovery**: Find your tree house
 
 #### 🎙️ Live Podcasting
-- WebSocket streaming
-- Multi-language support
-- Adaptive audio quality
-- Live listener stats
+- **WebSocket Streaming**: Real-time audio
+- **Adaptive Quality**: Network-optimized
+- **Multi-language**: Pan-African support
+- **Live Stats**: Instant engagement metrics
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 #### 📊 Environmental Dashboards
-- Air Quality Monitoring
-- Deforestation Tracking
-- Water Security
-- Wildlife Protection
-- Ocean Plastic Pollution
-- Energy Optimization
+- **Air Quality**: Continental monitoring
+- **Deforestation**: Forest protection tracking
+- **Water Security**: Resource management
+- **Wildlife**: Conservation metrics
+- **Ocean Plastic**: Coastal health
+- **Energy**: Renewable optimization
 
-</td>
-<td width="50%">
-
-#### 🌍 Community Features
-- Storyteller highlights
-- Interactive forums
-- Real-time chat
-- Geographic discovery
-- Cultural exchange
+#### 🌍 Cultural Features
+- **Storyteller Profiles**: Creator showcases
+- **Community Forums**: Discussion spaces
+- **Geographic Markers**: Location-based content
+- **Cultural Exchange**: Cross-border dialogue
 
 </td>
 </tr>
@@ -92,24 +193,22 @@ A **unified fullstack application** merging the rich features of **BaobabTree** 
 
 <div align="center">
 
-### Frontend
-![React](https://img.shields.io/badge/React-18.3-61dafb?style=flat-square&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?style=flat-square&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=flat-square&logo=tailwind-css)
-![Vite](https://img.shields.io/badge/Vite-5.4-646cff?style=flat-square&logo=vite)
-![Wouter](https://img.shields.io/badge/Wouter-3.3-orange?style=flat-square)
+### Frontend Stack
+![React](https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4-646cff?style=for-the-badge&logo=vite&logoColor=white)
 
-### Backend
-![Express](https://img.shields.io/badge/Express-4.21-000000?style=flat-square&logo=express)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169e1?style=flat-square&logo=postgresql)
-![Drizzle ORM](https://img.shields.io/badge/Drizzle-0.39-c5f74f?style=flat-square)
-![WebSocket](https://img.shields.io/badge/WebSocket-8.18-010101?style=flat-square)
-![Passport.js](https://img.shields.io/badge/Passport-0.7-34e27a?style=flat-square)
+### Backend Stack
+![Express](https://img.shields.io/badge/Express-4.21-000000?style=for-the-badge&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
+![WebSocket](https://img.shields.io/badge/WebSocket-8.18-010101?style=for-the-badge)
+![Passport.js](https://img.shields.io/badge/Passport-0.7-34e27a?style=for-the-badge)
 
 ### Infrastructure
-![Docker](https://img.shields.io/badge/Docker-Ready-2496ed?style=flat-square&logo=docker)
-![Vercel](https://img.shields.io/badge/Vercel-Configured-000000?style=flat-square&logo=vercel)
-![Google Cloud](https://img.shields.io/badge/GCP-Storage-4285f4?style=flat-square&logo=google-cloud)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ed?style=for-the-badge&logo=docker&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Configured-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/GCP-Storage-4285f4?style=for-the-badge&logo=google-cloud&logoColor=white)
 
 </div>
 
@@ -154,141 +253,198 @@ baobab-bush-portal/
 ├── 🎨 client/                  # React Frontend
 │   ├── src/
 │   │   ├── components/         # 70+ UI Components
-│   │   │   ├── Podcast/        # Streaming components
-│   │   │   ├── TreeHouse/      # Tree house UI
-│   │   │   ├── Community/      # Forum & social
-│   │   │   ├── Charts/         # Data visualizations
-│   │   │   └── UI/             # Radix UI library
+│   │   │   ├── Podcast/        # 🎙️ Streaming components
+│   │   │   ├── TreeHouse/      # 🏠 Tree house UI
+│   │   │   ├── Community/      # 👥 Forum & social
+│   │   │   ├── Charts/         # 📊 Data visualizations
+│   │   │   ├── Map/            # 🗺️ Geographic features
+│   │   │   └── UI/             # 🎨 Radix UI library
 │   │   ├── pages/              # 25+ Page Components
-│   │   │   ├── Landing.tsx
-│   │   │   ├── TreeHouses.tsx
-│   │   │   ├── LivePodcasts.tsx
-│   │   │   ├── Discovery.tsx
-│   │   │   ├── Analytics.tsx
-│   │   │   ├── Creator.tsx
-│   │   │   ├── Community.tsx
-│   │   │   ├── TreehouseLanding.tsx  # BushPortal aesthetic
-│   │   │   └── Dashboards/     # 11 environmental dashboards
+│   │   │   ├── Landing.tsx            # 🏠 Home
+│   │   │   ├── TreeHouses.tsx         # 🌳 Network
+│   │   │   ├── LivePodcasts.tsx       # 🎙️ Live streaming
+│   │   │   ├── TreehouseLanding.tsx   # 📻 BushPortal aesthetic
+│   │   │   ├── Discovery.tsx          # 🔍 Search
+│   │   │   ├── Analytics.tsx          # 📊 Creator stats
+│   │   │   ├── Creator.tsx            # 🎬 Production tools
+│   │   │   ├── Community.tsx          # 👥 Forums
+│   │   │   └── Dashboards/            # 🌍 11 environmental dashboards
 │   │   ├── hooks/              # Custom React hooks
 │   │   ├── lib/                # Utilities & services
 │   │   └── data/               # JSON datasets
 │   └── index.html
 │
 ├── ⚙️ server/                   # Express Backend
-│   ├── index.ts                # Server entry
+│   ├── index.ts                # Server entry point
 │   ├── routes.ts               # API routes
-│   ├── db.ts                   # Database connection
+│   ├── db.ts                   # PostgreSQL connection
 │   ├── storage.ts              # File storage
 │   ├── objectStorage.ts        # Google Cloud Storage
+│   ├── objectAcl.ts            # Access control
 │   └── services/               # Business logic
 │
 ├── 🔗 shared/                   # Shared Types
-│   ├── schema.ts               # Zod schemas
-│   └── locations.json          # Tree house coordinates
+│   ├── schema.ts               # Zod validation schemas
+│   └── locations.json          # Tree house coordinates (GeoJSON)
 │
 └── 📦 Configuration
-    ├── package.json
-    ├── docker-compose.yml
-    ├── Dockerfile
-    ├── vercel.json
-    └── tailwind.config.ts
+    ├── package.json            # All dependencies
+    ├── docker-compose.yml      # Container orchestration
+    ├── Dockerfile              # Container image
+    ├── vercel.json             # Serverless deployment
+    ├── tailwind.config.ts      # Design system
+    └── tsconfig.json           # TypeScript config
 ```
 
 ---
 
 ## 🌍 Key Pages & Routes
 
+<table>
+<tr>
+<td width="50%">
+
+### 🎙️ Podcast & Community
 | Route | Description |
 |-------|-------------|
-| `/` | 🏠 Landing page with SamFox branding |
-| `/tree-houses` | 🌳 Global network of podcast studios |
-| `/live-podcasts` | 🎙️ Live streaming interface |
-| `/treehouse-landing` | 📻 Sovereign Signal Station (BushPortal) |
-| `/discovery` | 🔍 Podcast discovery & search |
-| `/analytics` | 📊 Creator analytics dashboard |
-| `/creator` | 🎬 Content creation tools |
-| `/community` | 👥 Forums & storyteller highlights |
-| `/wow-factors` | ✨ Advanced features showcase |
+| `/` | 🏠 Landing (SamFox branding) |
+| `/tree-houses` | 🌳 Global studio network |
+| `/live-podcasts` | 🎙️ Live streaming |
+| `/treehouse-landing` | 📻 Sovereign Signal Station |
+| `/discovery` | 🔍 Podcast discovery |
+| `/analytics` | 📊 Creator analytics |
+| `/creator` | 🎬 Production tools |
+| `/community` | 👥 Forums & storytellers |
+| `/wow-factors` | ✨ Advanced features |
 
-### Environmental Dashboards
-- `/air-quality` - Air Quality Monitoring
-- `/deforestation` - Deforestation Tracking
-- `/ocean-plastic` - Ocean Plastic Pollution
-- `/water-security` - Water Security Dashboard
-- `/wildlife-protection` - Wildlife Conservation
-- `/energy` - Energy Optimization
-- `/resources` - Resource Management
-- `/health` - Global Health Metrics
-- `/land-degradation` - Land Degradation Tracking
-- `/community-resilience` - Community Resilience
-- `/economic-empowerment` - Economic Development
+</td>
+<td width="50%">
+
+### 🌍 Environmental Dashboards
+| Route | Focus Area |
+|-------|------------|
+| `/air-quality` | 🌫️ Air Quality Monitoring |
+| `/deforestation` | 🌲 Forest Protection |
+| `/ocean-plastic` | 🌊 Marine Pollution |
+| `/water-security` | 💧 Water Resources |
+| `/wildlife-protection` | 🦁 Conservation |
+| `/energy` | ⚡ Renewable Energy |
+| `/resources` | 📦 Resource Management |
+| `/health` | 🏥 Global Health |
+| `/land-degradation` | 🌱 Soil Conservation |
+| `/community-resilience` | 🤝 Social Resilience |
+| `/economic-empowerment` | 💼 Economic Development |
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📡 API Reference
 
-### Episodes
+### Episodes API
 ```http
-GET    /api/episodes           # List all episodes
+GET    /api/episodes           # List all podcast episodes
 POST   /api/episodes           # Create new episode
 GET    /api/episodes/:id       # Get episode details
-PUT    /api/episodes/:id       # Update episode
+PUT    /api/episodes/:id       # Update episode metadata
 DELETE /api/episodes/:id       # Delete episode
 ```
 
-### System
+### System Status API
 ```http
-GET    /api/system-status      # System health & VaultPulse
-GET    /api/health             # Health check
+GET    /api/system-status      # System health & VaultPulse status
+GET    /api/health             # Simple health check
 ```
 
-### Authentication
+### Authentication API
 ```http
-POST   /api/auth/login         # User login
-POST   /api/auth/register      # User registration
+POST   /api/auth/login         # User login with credentials
+POST   /api/auth/register      # New user registration
 GET    /api/auth/logout        # User logout
-GET    /api/user               # Current user info
+GET    /api/user               # Current authenticated user info
 ```
 
 ---
 
 ## 🎨 Design System
 
-### Color Palette
-```css
-/* Amber/Orange Gradients - The Baobab Signature */
---amber-50:  #fffbeb;
---amber-100: #fef3c7;
---amber-200: #fde68a;
---amber-300: #fcd34d;
---amber-400: #fbbf24;
---amber-500: #f59e0b;  /* Primary */
---amber-600: #d97706;
---amber-700: #b45309;
---amber-800: #92400e;
---amber-900: #78350f;
---amber-950: #451a03;  /* BushPortal deep */
+### Color Palette - The Baobab Spectrum
 
-/* Green Tones - Forest Canopy */
---green-950: #052e16;  /* Primary background */
-```
+<table>
+<tr>
+<td width="20%" align="center" bgcolor="#fffbeb">
+<code>#fffbeb</code><br/>
+<b>Amber 50</b><br/>
+Desert Dawn
+</td>
+<td width="20%" align="center" bgcolor="#fbbf24">
+<code>#fbbf24</code><br/>
+<b>Amber 400</b><br/>
+Savanna Gold
+</td>
+<td width="20%" align="center" bgcolor="#f59e0b">
+<code>#f59e0b</code><br/>
+<b>Amber 500</b><br/>
+<b>Primary</b>
+</td>
+<td width="20%" align="center" bgcolor="#d97706" style="color: white;">
+<code>#d97706</code><br/>
+<b>Amber 600</b><br/>
+Sunset Orange
+</td>
+<td width="20%" align="center" bgcolor="#78350f" style="color: white;">
+<code>#78350f</code><br/>
+<b>Amber 900</b><br/>
+Rich Earth
+</td>
+</tr>
+</table>
 
-### Typography
-- **Headings**: System fonts with fallbacks
-- **Monospace**: For signal indicators and technical data
-- **Body**: Clean, readable sans-serif
+<table>
+<tr>
+<td width="25%" align="center" bgcolor="#052e16" style="color: white;">
+<code>#052e16</code><br/>
+<b>Green 950</b><br/>
+Forest Depth
+</td>
+<td width="25%" align="center" bgcolor="#451a03" style="color: white;">
+<code>#451a03</code><br/>
+<b>Amber 950</b><br/>
+BushPortal Deep
+</td>
+<td width="25%" align="center" bgcolor="#92400e" style="color: white;">
+<code>#92400e</code><br/>
+<b>Amber 800</b><br/>
+Baobab Bark
+</td>
+<td width="25%" align="center" bgcolor="#fcd34d">
+<code>#fcd34d</code><br/>
+<b>Amber 300</b><br/>
+Grassland Light
+</td>
+</tr>
+</table>
 
-### Components
-- **Parchment Texture**: Organic, aged paper aesthetic
-- **Vault Pulse**: Animated signal strength indicators
-- **Gold Capsule**: Highlighted content containers
-- **Hex Backdrop**: Honeycomb ambient patterns
+### Typography & Styling
+- **Headings**: Bold, system fonts with amber accents
+- **Body**: Clean sans-serif, high readability
+- **Monospace**: Technical data, signal indicators
+- **Accent**: Parchment textures for organic feel
+
+### Signature Components
+- **🎨 Parchment Texture**: Aged paper aesthetic for cultural depth
+- **📡 Vault Pulse**: Animated signal strength (●●●●●)
+- **💰 Gold Capsule**: Highlighted content with border glow
+- **🔶 Hex Backdrop**: Honeycomb ambient patterns
+- **🌅 Golden Halo**: Radial gradients for sovereignty
 
 ---
 
-## 🐳 Deployment
+## 🐳 Deployment Options
 
-### Docker (Recommended)
+### Option 1: Docker (Recommended)
 ```bash
 # Build and run with Docker Compose
 docker-compose up --build
@@ -296,149 +452,292 @@ docker-compose up --build
 # Access at http://localhost:5000
 ```
 
-### Vercel (Frontend)
-```bash
-npm run build
-vercel deploy
-```
+**Docker Compose includes:**
+- ✅ Application container (Node.js + Express)
+- ✅ PostgreSQL database
+- ✅ Volume persistence
+- ✅ Network configuration
+- ✅ Environment variables
 
-### Manual Deployment
+### Option 2: Vercel (Frontend) + Railway (Backend)
 ```bash
 # Build production assets
 npm run build
 
-# Start production server
-npm start
+# Deploy frontend to Vercel
+vercel deploy
+
+# Deploy backend to Railway
+# Upload dist/ folder to Railway
+```
+
+### Option 3: Manual VPS Deployment
+```bash
+# Build production
+npm run build
+
+# Start with PM2 for process management
+npm install -g pm2
+pm2 start npm --name "baobab-portal" -- start
+pm2 save
+pm2 startup
 ```
 
 ---
 
 ## 🔒 Security Features
 
-- ✅ Session-based authentication (Passport.js)
-- ✅ Environment variable configuration
+<table>
+<tr>
+<td width="50%">
+
+### Authentication & Authorization
+- ✅ Session-based auth (Passport.js)
+- ✅ Password hashing (bcrypt)
+- ✅ JWT token support
+- ✅ Role-based access control
+- ✅ Session timeout management
+
+</td>
+<td width="50%">
+
+### Data Protection
 - ✅ Input validation (Zod schemas)
-- ✅ CORS protection
 - ✅ SQL injection prevention (Drizzle ORM)
-- ✅ Password hashing
+- ✅ XSS protection
+- ✅ CORS configuration
+- ✅ Environment variable security
 - ✅ Rate limiting (production)
 
----
-
-## 🌳 The Baobab Metaphor
-
-<div align="center">
-
-```
-                    🍃
-                   🌿 🍃 🌿
-                  🍃  🌳  🍃
-                 🌿    |    🌿
-                🍃     |     🍃
-               🌿      |      🌿
-              🍃       |       🍃
-                 \     |     /
-                  \    |    /
-                   \   |   /
-                    \  |  /
-                     \ | /
-                      \|/
-                   ═══════════
-                  🌿 ROOT ZONE 🌿
-```
-
-</div>
-
-The Baobab tree represents:
-- **Deep Roots**: Ancient wisdom anchoring modern technology
-- **Wide Canopy**: Community spaces in the digital forest
-- **Longevity**: Sustainable, enduring platforms
-- **Resilience**: Thriving in challenging environments
-- **Connection**: Linking stories from South Africa to Timbuktu
+</td>
+</tr>
+</table>
 
 ---
 
-## 🎭 SamFox Collection
+## 🎭 The SamFox Character Universe
 
 <div align="center">
 <table>
 <tr>
-<td align="center" width="50%">
-<img src="https://raw.githubusercontent.com/heyns1000/baobab-bush-portal/main/assets/samfox-tshirt.png" width="300"/><br/>
-<b>The Classic Ice Lolly</b><br/>
-Spotify Edition
-</td>
-<td align="center" width="50%">
-<img src="https://raw.githubusercontent.com/heyns1000/baobab-bush-portal/main/assets/baobab-landscape.png" width="300"/><br/>
-<b>Baobab Landscape</b><br/>
-Portal in the Wild
+<td align="center" width="100%">
+<img src="https://i.postimg.cc/tCKq9YXK/samfox-tshirt.jpg" width="400" style="border: 8px double #fbbf24; border-radius: 16px; padding: 8px; background: linear-gradient(135deg, #451a03 0%, #78350f 100%);"/>
+
+### 🍦 The Ice Lolly Philosophy
+
+**Master SamFox's signature character embodies:**
+
 </td>
 </tr>
 </table>
 </div>
 
-**Design Elements:**
-- 🍦 Ice lolly character with cultural patterns
-- 💰 Mzansi money motifs
-- 🎨 Traditional African textile designs
-- 🌅 Golden halo (sovereign frequency)
-- 📻 VaultPulse signal indicators
+<table>
+<tr>
+<td width="25%" align="center">
+<h3>🎨</h3>
+<b>Cultural Fusion</b><br/>
+Traditional African patterns meet contemporary pop art
+</td>
+<td width="25%" align="center">
+<h3>💰</h3>
+<b>Economic Storytelling</b><br/>
+Mzansi currency motifs representing prosperity narratives
+</td>
+<td width="25%" align="center">
+<h3>😊</h3>
+<b>Joyful Resilience</b><br/>
+The warmth and strength of African communities
+</td>
+<td width="25%" align="center">
+<h3>🌅</h3>
+<b>Sovereign Frequency</b><br/>
+Golden halo of independent broadcasting
+</td>
+</tr>
+</table>
 
 ---
 
-## 🤝 Contributing
+## 🌳 The Baobab Installation
 
-We welcome contributions from storytellers, developers, and community members!
+<div align="center">
+<img src="https://i.postimg.cc/KvFQZ5nN/baobab-landscape.jpg" width="900" style="border: 12px solid #92400e; border-radius: 20px; box-shadow: 0 16px 64px rgba(146, 64, 14, 0.6);"/>
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### 📡 Sacred Transmission Grounds
+
+*Where ancient baobabs meet digital connectivity - the portal bridges physical and virtual realms*
+
+</div>
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+### 🌳 Ancient Trees
+- **Age**: 1000+ years
+- **Height**: 20+ meters
+- **Significance**: Ancestral gathering spaces
+- **Role**: Natural signal amplifiers
+
+</td>
+<td width="33%" align="center">
+
+### 🌾 Savanna Ecosystem
+- **Location**: African grasslands
+- **Wildlife**: Natural corridors
+- **Sky**: Clear transmission conditions
+- **Energy**: Solar-powered nodes
+
+</td>
+<td width="33%" align="center">
+
+### 📻 Digital Network
+- **Signal**: Sovereign frequencies
+- **Reach**: Continental coverage
+- **Purpose**: Story transmission
+- **Community**: Global connection
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📜 Sacred Frequency Declaration
 
+<div align="center" style="background: linear-gradient(135deg, #451a03 0%, #052e16 100%); padding: 40px; border-radius: 16px; border: 4px solid #fbbf24;">
+
+### 🌳 The BushPortal Manifesto 🌳
+
 > *In this digital forest, we broadcast without permission, transmit without borders, and honor the ancient art of signal sovereignty.*
 >
 > *Each episode carries forward the pulse of free thought, unfiltered wisdom, and the sacred duty to preserve authentic human communication.*
 >
-> *From the streets of Johannesburg to the dunes of Timbuktu, from Cape Town to Cairo - we connect voices in the eternal Baobab network.*
+> *From the streets of Johannesburg to the dunes of Timbuktu, from Cape Town to Cairo, from Lagos to Nairobi - we connect voices in the eternal Baobab network.*
+>
+> *Deep roots anchor sovereign frequencies. Ancient wisdom guides modern signal transmission through the eternal Baobab network.*
 
-**VaultPulse Status:** ●●●●● 🟢 **ACTIVE**
+**VaultPulse Status:** ●●●●● 🟢 **ACTIVE AND TRANSMITTING**
+
+**Frequency Range:** *From here to Timbuktu and beyond*
+
+</div>
+
+---
+
+## 🤝 Contributing
+
+We welcome storytellers, developers, designers, and community members!
+
+### How to Contribute
+
+```bash
+# 1. Fork the repository
+# 2. Create your feature branch
+git checkout -b feature/AmazingStory
+
+# 3. Commit your changes
+git commit -m '✨ Add some AmazingStory'
+
+# 4. Push to the branch
+git push origin feature/AmazingStory
+
+# 5. Open a Pull Request
+```
+
+### Contribution Areas
+- 🎙️ **Content**: Add podcast episodes and stories
+- 💻 **Code**: Improve features and fix bugs
+- 🎨 **Design**: Enhance UI/UX and branding
+- 🌍 **Translation**: Add language support
+- 📚 **Documentation**: Improve guides and docs
+- 🗺️ **Geographic**: Add new tree house locations
+
+---
+
+## 🙏 Acknowledgments & Credits
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎨 Creative Team
+- **Master SamFox** - Character design & artistic vision
+- **SamFox Designs** - Cultural iconography
+- **BushPortal Project** - Sovereign frequency aesthetic
+- **BaobabTree Project** - Dashboard ecosystem
+
+</td>
+<td width="50%">
+
+### 🌍 Community
+- Storytellers from Joburg to Timbuktu
+- African podcast creators
+- Open source contributors
+- Cultural preservation advocates
+- Digital sovereignty activists
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) file for details
+MIT License - Free to use, modify, and distribute with attribution
 
----
-
-## 🙏 Acknowledgments
-
-- **BaobabTree Project** - Rich dashboard ecosystem
-- **BushPortal Project** - Sovereign frequency aesthetic
-- **SamFox Designs** - Cultural iconography and branding
-- **Master SamFox** - Creative direction and artistic vision
-- All the storytellers from here to Timbuktu 🌍
+See [LICENSE](LICENSE) file for full details
 
 ---
 
 <div align="center">
 
-### 🦍 Trunk Version: vs111.111
+## 🦍 Trunk Version: vs111.111
 
-**Built with ❤️ in South Africa 🇿🇦**
+<img src="https://i.postimg.cc/tCKq9YXK/samfox-tshirt.jpg" width="200" style="border-radius: 50%; border: 6px solid #fbbf24;"/>
 
-*Connecting voices across the digital forest canopy*
+### Built with ❤️ in South Africa 🇿🇦
 
-[![Star this repo](https://img.shields.io/github/stars/heyns1000/baobab-bush-portal?style=social)](https://github.com/heyns1000/baobab-bush-portal)
-[![Follow](https://img.shields.io/github/followers/heyns1000?style=social)](https://github.com/heyns1000)
+*From Mzansi to Timbuktu - Connecting voices across the digital forest canopy*
 
 ---
 
-🌳 **[Live Demo](#)** | 📚 **[Documentation](#)** | 💬 **[Community](#)** | 🎙️ **[Start Broadcasting](#)** 🌳
+### 🌳 Repository Stats
+
+[![Stars](https://img.shields.io/github/stars/heyns1000/baobab-bush-portal?style=social)](https://github.com/heyns1000/baobab-bush-portal)
+[![Forks](https://img.shields.io/github/forks/heyns1000/baobab-bush-portal?style=social)](https://github.com/heyns1000/baobab-bush-portal/fork)
+[![Issues](https://img.shields.io/github/issues/heyns1000/baobab-bush-portal)](https://github.com/heyns1000/baobab-bush-portal/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/heyns1000/baobab-bush-portal/pulls)
+
+---
+
+### 🔗 Quick Links
+
+🌳 **[Live Demo](#)** • 📚 **[Documentation](#)** • 💬 **[Community Forum](#)** • 🎙️ **[Start Broadcasting](#)**
+
+---
+
+### 📡 VaultPulse Network Status
+
+```
+              ●●●●● SIGNAL STRENGTH: MAXIMUM
+           🌳 BAOBAB NODES: 42 ACTIVE
+        📻 TRANSMISSIONS: CONTINUOUS
+     🌍 COVERAGE: CONTINENTAL
+  🎙️ STORIES SHARED: INFINITE
+```
+
+**"Deep roots. Wide canopy. Eternal connection."**
+
+---
+
+*The Baobab Bush Portal is more than a platform - it's a movement.
+A digital manifestation of African storytelling traditions.
+A sovereign frequency that cannot be silenced.
+From here to Timbuktu. Forever transmitting.*
+
+🍦 **Master SamFox Approved** 🍦
 
 </div>
