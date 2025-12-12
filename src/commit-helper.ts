@@ -4,6 +4,12 @@ import { execSync } from 'child_process';
 
 dotenv.config();
 
+if (!process.env.ANTHROPIC_API_KEY) {
+  console.error('❌ Error: ANTHROPIC_API_KEY not found in environment variables');
+  console.error('Please create a .env file with your API key');
+  process.exit(1);
+}
+
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
