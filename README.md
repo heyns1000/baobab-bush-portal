@@ -684,6 +684,65 @@ git push origin feature/AmazingStory
 
 ---
 
+## 🤖 AI-Powered Portal System
+
+The Baobab Bush Portal now includes a fully automated AI-powered system integrating with **Foxed Has Mobiles** mobile solutions.
+
+### 🚀 Quick Start
+
+```bash
+# Install dependencies
+pnpm install
+
+# Set up environment (already configured)
+# See .env file for API keys
+
+# Run the portal
+pnpm start
+```
+
+### 🦊 Available AI Commands
+
+- `pnpm start` - Initialize the portal with AI introduction
+- `pnpm portal` or `pnpm chat` - Interactive AI chat assistant
+- `pnpm review <file>` - AI-powered code review
+- `pnpm docs` - Generate comprehensive documentation
+- `pnpm commit` - AI commit message generator
+
+### 🌳 AI Portal Architecture
+
+The Baobab Portal integrates:
+- 🦊 **Foxed Has Mobiles** - Mobile TypeScript solutions
+- 🔒 **Security Network** - AI-powered security analysis
+- 💼 **Fruitful Holdings** - CodeNest ecosystem integration
+- 🤖 **Claude AI** - Advanced AI automation powered by Anthropic
+
+### 📦 AI Tech Stack
+
+- TypeScript with strict mode
+- Anthropic Claude AI (claude-3-5-sonnet)
+- Node.js runtime
+- pnpm package manager
+- Modular architecture with types
+
+### 📁 AI Portal Structure
+
+```
+src/
+├── index.ts           # Main portal entry point
+├── baobab-portal.ts   # Interactive AI assistant
+├── code-reviewer.ts   # AI code reviewer
+├── doc-generator.ts   # Documentation generator
+├── commit-helper.ts   # Commit message helper
+├── config.ts          # Portal configuration
+└── types.ts           # TypeScript definitions
+```
+
+**Built by**: Heyns Schoeman 🔥 CodeNest  
+**Location**: Pretoria, South Africa
+
+---
+
 ## 📄 License
 
 MIT License - Free to use, modify, and distribute with attribution
