@@ -1,0 +1,164 @@
+{
+  "regions": {
+    "north_america": {
+      "name": "North America",
+      "flag": "🇺🇸",
+      "color": "#2563eb",
+      "accent": "#60a5fa",
+      "locations": [
+        {"id": "ny", "name": "New York", "country": "USA", "coords": [40.7128, -74.0060], "frequency": "94.7"},
+        {"id": "la", "name": "Los Angeles", "country": "USA", "coords": [34.0522, -118.2437], "frequency": "101.1"},
+        {"id": "chi", "name": "Chicago", "country": "USA", "coords": [41.8781, -87.6298], "frequency": "93.1"},
+        {"id": "mia", "name": "Miami", "country": "USA", "coords": [25.7617, -80.1918], "frequency": "99.9"},
+        {"id": "sf", "name": "San Francisco", "country": "USA", "coords": [37.7749, -122.4194], "frequency": "106.1"},
+        {"id": "sea", "name": "Seattle", "country": "USA", "coords": [47.6062, -122.3321], "frequency": "102.5"},
+        {"id": "bos", "name": "Boston", "country": "USA", "coords": [42.3601, -71.0589], "frequency": "92.9"},
+        {"id": "atl", "name": "Atlanta", "country": "USA", "coords": [33.7490, -84.3880], "frequency": "96.7"},
+        {"id": "tor", "name": "Toronto", "country": "Canada", "coords": [43.6532, -79.3832], "frequency": "98.1"},
+        {"id": "van", "name": "Vancouver", "country": "Canada", "coords": [49.2827, -123.1207], "frequency": "95.3"},
+        {"id": "mon", "name": "Montreal", "country": "Canada", "coords": [45.5017, -73.5673], "frequency": "97.7"},
+        {"id": "mex", "name": "Mexico City", "country": "Mexico", "coords": [19.4326, -99.1332], "frequency": "88.9"}
+      ]
+    },
+    "europe": {
+      "name": "Europe",
+      "flag": "🇪🇺",
+      "color": "#7c3aed",
+      "accent": "#a78bfa",
+      "locations": [
+        {"id": "lon", "name": "London", "country": "UK", "coords": [51.5074, -0.1278], "frequency": "95.8"},
+        {"id": "par", "name": "Paris", "country": "France", "coords": [48.8566, 2.3522], "frequency": "104.3"},
+        {"id": "ber", "name": "Berlin", "country": "Germany", "coords": [52.5200, 13.4050], "frequency": "91.4"},
+        {"id": "rom", "name": "Rome", "country": "Italy", "coords": [41.9028, 12.4964], "frequency": "103.7"},
+        {"id": "mad", "name": "Madrid", "country": "Spain", "coords": [40.4168, -3.7038], "frequency": "89.6"},
+        {"id": "ams", "name": "Amsterdam", "country": "Netherlands", "coords": [52.3676, 4.9041], "frequency": "100.7"},
+        {"id": "sto", "name": "Stockholm", "country": "Sweden", "coords": [59.3293, 18.0686], "frequency": "107.5"},
+        {"id": "cop", "name": "Copenhagen", "country": "Denmark", "coords": [55.6761, 12.5683], "frequency": "98.8"},
+        {"id": "hel", "name": "Helsinki", "country": "Finland", "coords": [60.1699, 24.9384], "frequency": "94.0"},
+        {"id": "lis", "name": "Lisbon", "country": "Portugal", "coords": [38.7223, -9.1393], "frequency": "92.1"},
+        {"id": "vie", "name": "Vienna", "country": "Austria", "coords": [48.2082, 16.3738], "frequency": "105.2"},
+        {"id": "zur", "name": "Zurich", "country": "Switzerland", "coords": [47.3769, 8.5417], "frequency": "90.3"}
+      ]
+    },
+    "asia_pacific": {
+      "name": "Asia Pacific",
+      "flag": "🌏",
+      "color": "#059669",
+      "accent": "#34d399",
+      "locations": [
+        {"id": "tok", "name": "Tokyo", "country": "Japan", "coords": [35.6762, 139.6503], "frequency": "76.1"},
+        {"id": "bei", "name": "Beijing", "country": "China", "coords": [39.9042, 116.4074], "frequency": "87.6"},
+        {"id": "seo", "name": "Seoul", "country": "South Korea", "coords": [37.5665, 126.9780], "frequency": "89.1"},
+        {"id": "sin", "name": "Singapore", "country": "Singapore", "coords": [1.3521, 103.8198], "frequency": "91.3"},
+        {"id": "hk", "name": "Hong Kong", "country": "Hong Kong", "coords": [22.3193, 114.1694], "frequency": "88.4"},
+        {"id": "syd", "name": "Sydney", "country": "Australia", "coords": [-33.8688, 151.2093], "frequency": "96.1"},
+        {"id": "mel", "name": "Melbourne", "country": "Australia", "coords": [-37.8136, 144.9631], "frequency": "101.9"},
+        {"id": "ban", "name": "Bangkok", "country": "Thailand", "coords": [13.7563, 100.5018], "frequency": "95.5"},
+        {"id": "jkt", "name": "Jakarta", "country": "Indonesia", "coords": [-6.2088, 106.8456], "frequency": "99.1"},
+        {"id": "kl", "name": "Kuala Lumpur", "country": "Malaysia", "coords": [3.1390, 101.6869], "frequency": "93.8"},
+        {"id": "mum", "name": "Mumbai", "country": "India", "coords": [19.0760, 72.8777], "frequency": "92.7"},
+        {"id": "del", "name": "New Delhi", "country": "India", "coords": [28.6139, 77.2090], "frequency": "98.3"}
+      ]
+    },
+    "south_america": {
+      "name": "South America",
+      "flag": "🌎",
+      "color": "#dc2626",
+      "accent": "#f87171",
+      "locations": [
+        {"id": "sao", "name": "São Paulo", "country": "Brazil", "coords": [-23.5505, -46.6333], "frequency": "89.1"},
+        {"id": "rio", "name": "Rio de Janeiro", "country": "Brazil", "coords": [-22.9068, -43.1729], "frequency": "94.9"},
+        {"id": "bue", "name": "Buenos Aires", "country": "Argentina", "coords": [-34.6118, -58.3960], "frequency": "91.9"},
+        {"id": "bog", "name": "Bogotá", "country": "Colombia", "coords": [4.7110, -74.0721], "frequency": "88.9"},
+        {"id": "lim", "name": "Lima", "country": "Peru", "coords": [-12.0464, -77.0428], "frequency": "103.9"},
+        {"id": "san", "name": "Santiago", "country": "Chile", "coords": [-33.4489, -70.6693], "frequency": "100.1"},
+        {"id": "car", "name": "Caracas", "country": "Venezuela", "coords": [10.4806, -66.9036], "frequency": "96.9"},
+        {"id": "qui", "name": "Quito", "country": "Ecuador", "coords": [-0.1807, -78.4678], "frequency": "92.5"},
+        {"id": "mon", "name": "Montevideo", "country": "Uruguay", "coords": [-34.9011, -56.1645], "frequency": "95.1"},
+        {"id": "asu", "name": "Asunción", "country": "Paraguay", "coords": [-25.2637, -57.5759], "frequency": "90.7"},
+        {"id": "lp", "name": "La Paz", "country": "Bolivia", "coords": [-16.2902, -68.1193], "frequency": "88.1"},
+        {"id": "geo", "name": "Georgetown", "country": "Guyana", "coords": [6.8013, -58.1551], "frequency": "94.3"}
+      ]
+    },
+    "africa": {
+      "name": "Africa",
+      "flag": "🌍",
+      "color": "#ea580c",
+      "accent": "#fb923c",
+      "locations": [
+        {"id": "cai", "name": "Cairo", "country": "Egypt", "coords": [30.0444, 31.2357], "frequency": "95.0"},
+        {"id": "joh", "name": "Johannesburg", "country": "South Africa", "coords": [-26.2041, 28.0473], "frequency": "94.7"},
+        {"id": "lag", "name": "Lagos", "country": "Nigeria", "coords": [6.5244, 3.3792], "frequency": "99.9"},
+        {"id": "nai", "name": "Nairobi", "country": "Kenya", "coords": [-1.2921, 36.8219], "frequency": "91.1"},
+        {"id": "cas", "name": "Casablanca", "country": "Morocco", "coords": [33.5731, -7.5898], "frequency": "88.6"},
+        {"id": "alg", "name": "Algiers", "country": "Algeria", "coords": [36.7538, 3.0588], "frequency": "106.8"},
+        {"id": "tun", "name": "Tunis", "country": "Tunisia", "coords": [36.8065, 10.1815], "frequency": "92.4"},
+        {"id": "acc", "name": "Accra", "country": "Ghana", "coords": [5.6037, -0.1870], "frequency": "97.9"},
+        {"id": "add", "name": "Addis Ababa", "country": "Ethiopia", "coords": [9.1450, 38.7577], "frequency": "90.1"},
+        {"id": "dar", "name": "Dar es Salaam", "country": "Tanzania", "coords": [-6.7924, 39.2083], "frequency": "101.9"},
+        {"id": "kam", "name": "Kampala", "country": "Uganda", "coords": [0.3476, 32.5825], "frequency": "89.5"},
+        {"id": "lub", "name": "Luanda", "country": "Angola", "coords": [-8.8390, 13.2894], "frequency": "93.1"}
+      ]
+    },
+    "middle_east": {
+      "name": "Middle East",
+      "flag": "🕌",
+      "color": "#7c2d12",
+      "accent": "#ea580c",
+      "locations": [
+        {"id": "dub", "name": "Dubai", "country": "UAE", "coords": [25.2048, 55.2708], "frequency": "92.0"},
+        {"id": "riy", "name": "Riyadh", "country": "Saudi Arabia", "coords": [24.7136, 46.6753], "frequency": "88.8"},
+        {"id": "tel", "name": "Tel Aviv", "country": "Israel", "coords": [32.0853, 34.7818], "frequency": "102.5"},
+        {"id": "ist", "name": "Istanbul", "country": "Turkey", "coords": [41.0082, 28.9784], "frequency": "94.9"},
+        {"id": "teh", "name": "Tehran", "country": "Iran", "coords": [35.6892, 51.3890], "frequency": "96.6"},
+        {"id": "kuw", "name": "Kuwait City", "country": "Kuwait", "coords": [29.3117, 47.4818], "frequency": "90.9"},
+        {"id": "doh", "name": "Doha", "country": "Qatar", "coords": [25.2854, 51.5310], "frequency": "98.4"},
+        {"id": "man", "name": "Manama", "country": "Bahrain", "coords": [26.0667, 50.5577], "frequency": "91.7"},
+        {"id": "mus", "name": "Muscat", "country": "Oman", "coords": [23.5859, 58.4059], "frequency": "89.2"},
+        {"id": "san", "name": "Sana'a", "country": "Yemen", "coords": [15.3694, 44.1910], "frequency": "95.8"},
+        {"id": "amm", "name": "Amman", "country": "Jordan", "coords": [31.9454, 35.9284], "frequency": "88.1"},
+        {"id": "bei", "name": "Beirut", "country": "Lebanon", "coords": [33.8938, 35.5018], "frequency": "100.5"}
+      ]
+    },
+    "oceania": {
+      "name": "Oceania",
+      "flag": "🏝️",
+      "color": "#0891b2",
+      "accent": "#22d3ee",
+      "locations": [
+        {"id": "auc", "name": "Auckland", "country": "New Zealand", "coords": [-36.8485, 174.7633], "frequency": "89.4"},
+        {"id": "wel", "name": "Wellington", "country": "New Zealand", "coords": [-41.2924, 174.7787], "frequency": "91.8"},
+        {"id": "suv", "name": "Suva", "country": "Fiji", "coords": [-18.1248, 178.4501], "frequency": "88.0"},
+        {"id": "por", "name": "Port Moresby", "country": "Papua New Guinea", "coords": [-9.4438, 147.1803], "frequency": "95.5"},
+        {"id": "nou", "name": "Nouméa", "country": "New Caledonia", "coords": [-22.2758, 166.4581], "frequency": "92.9"},
+        {"id": "pap", "name": "Papeete", "country": "French Polynesia", "coords": [-17.5516, -149.5585], "frequency": "96.1"},
+        {"id": "ape", "name": "Apia", "country": "Samoa", "coords": [-13.8506, -171.7513], "frequency": "90.3"},
+        {"id": "nuk", "name": "Nuku'alofa", "country": "Tonga", "coords": [-21.1390, -175.2018], "frequency": "87.7"},
+        {"id": "tar", "name": "Tarawa", "country": "Kiribati", "coords": [1.3278, 172.9797], "frequency": "93.2"},
+        {"id": "hon", "name": "Honiara", "country": "Solomon Islands", "coords": [-9.4280, 159.9496], "frequency": "89.6"},
+        {"id": "por", "name": "Port Vila", "country": "Vanuatu", "coords": [-17.7334, 168.3273], "frequency": "94.8"},
+        {"id": "pal", "name": "Ngerulmud", "country": "Palau", "coords": [7.5006, 134.6242], "frequency": "86.5"}
+      ]
+    },
+    "arctic_regions": {
+      "name": "Arctic Regions",
+      "flag": "🧊",
+      "color": "#1e40af",
+      "accent": "#60a5fa",
+      "locations": [
+        {"id": "rey", "name": "Reykjavik", "country": "Iceland", "coords": [64.1466, -21.9426], "frequency": "88.5"},
+        {"id": "gre", "name": "Nuuk", "country": "Greenland", "coords": [64.1836, -51.7214], "frequency": "90.1"},
+        {"id": "anc", "name": "Anchorage", "country": "Alaska", "coords": [61.2181, -149.9003], "frequency": "91.3"},
+        {"id": "mur", "name": "Murmansk", "country": "Russia", "coords": [68.9585, 33.0827], "frequency": "89.7"},
+        {"id": "tro", "name": "Tromsø", "country": "Norway", "coords": [69.6493, 18.9553], "frequency": "92.5"},
+        {"id": "yel", "name": "Yellowknife", "country": "Canada", "coords": [62.4540, -114.3718], "frequency": "87.9"},
+        {"id": "iqq", "name": "Iqaluit", "country": "Canada", "coords": [63.7467, -68.5170], "frequency": "94.2"},
+        {"id": "bar", "name": "Utqiagvik", "country": "Alaska", "coords": [71.2906, -156.7886], "frequency": "86.1"},
+        {"id": "rov", "name": "Rovaniemi", "country": "Finland", "coords": [66.5039, 25.7294], "frequency": "88.8"},
+        {"id": "sva", "name": "Longyearbyen", "country": "Svalbard", "coords": [78.2232, 15.6267], "frequency": "85.4"},
+        {"id": "fai", "name": "Fairbanks", "country": "Alaska", "coords": [64.8378, -147.7164], "frequency": "93.6"},
+        {"id": "nor", "name": "Norrilsk", "country": "Russia", "coords": [69.3558, 88.1893], "frequency": "87.2"}
+      ]
+    }
+  }
+}

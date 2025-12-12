@@ -1,0 +1,101 @@
+{
+  "featured_storytellers": [
+    {
+      "id": "amara-kikwete",
+      "name": "Amara Kikwete",
+      "title": "Traditional Wisdom Keeper",
+      "tree_house": "Tanzania Tree House",
+      "country": "Tanzania",
+      "specialty": "Swahili Folklore & Ancient Stories",
+      "bio": "Amara preserves centuries-old Maasai and Swahili oral traditions, sharing stories passed down through generations under the African sky.",
+      "podcast": "African Sunrise Stories",
+      "listeners": 12400,
+      "episodes": 87,
+      "languages": ["Swahili", "English", "Maasai"],
+      "signature_story": "The Great Migration Tales",
+      "join_date": "2024-03-15"
+    },
+    {
+      "id": "kemi-adebayo",
+      "name": "Kemi Adebayo",
+      "title": "Urban Culture Chronicler",
+      "tree_house": "Nigeria Hub",
+      "country": "Nigeria",
+      "specialty": "Contemporary African Music & Arts",
+      "bio": "From the bustling streets of Lagos, Kemi bridges traditional Yoruba culture with modern African creativity and innovation.",
+      "podcast": "Lagos Live Beat",
+      "listeners": 18700,
+      "episodes": 134,
+      "languages": ["English", "Yoruba", "Pidgin"],
+      "signature_story": "Afrobeat Revolution Chronicles",
+      "join_date": "2024-01-22"
+    },
+    {
+      "id": "ahmed-ould",
+      "name": "Ahmed Ould Mahmoud",
+      "title": "Desert Historian",
+      "tree_house": "Mauritania Oasis",
+      "country": "Mauritania",
+      "specialty": "Saharan Trade Routes & Nomadic Heritage",
+      "bio": "Ahmed carries the stories of ancient caravan routes and the wisdom of desert nomads across the vast Sahara.",
+      "podcast": "Desert Dialogues",
+      "listeners": 8900,
+      "episodes": 56,
+      "languages": ["Arabic", "French", "Hassaniya"],
+      "signature_story": "Salt Road Legends",
+      "join_date": "2024-05-08"
+    },
+    {
+      "id": "hery-rasolofo",
+      "name": "Hery Rasolofo",
+      "title": "Island Naturalist",
+      "tree_house": "Madagascar Baobab",
+      "country": "Madagascar",
+      "specialty": "Endemic Species & Conservation Stories",
+      "bio": "Hery shares the unique biodiversity stories of Madagascar, home to species found nowhere else on Earth.",
+      "podcast": "Madagascar Lemur Tales",
+      "listeners": 15200,
+      "episodes": 92,
+      "languages": ["Malagasy", "French", "English"],
+      "signature_story": "The Last Giants of Madagascar",
+      "join_date": "2024-02-14"
+    },
+    {
+      "id": "akosua-mensah",
+      "name": "Akosua Mensah",
+      "title": "Cultural Heritage Weaver",
+      "tree_house": "Ghana Tree House",
+      "country": "Ghana",
+      "specialty": "Akan Traditions & Golden Heritage",
+      "bio": "Akosua weaves together the rich tapestry of Ghanaian culture, from ancient kingdoms to modern resilience.",
+      "podcast": "Gold Coast Chronicles",
+      "listeners": 11600,
+      "episodes": 78,
+      "languages": ["English", "Akan", "Twi"],
+      "signature_story": "The Golden Stool Mysteries",
+      "join_date": "2024-04-03"
+    },
+    {
+      "id": "fatima-mbeki",
+      "name": "Dr. Fatima Mbeki",
+      "title": "Conservation Scientist",
+      "tree_house": "South Africa Hub",
+      "country": "South Africa",
+      "specialty": "Wildlife Conservation & Research",
+      "bio": "Dr. Mbeki combines scientific research with storytelling to share the urgent stories of African wildlife conservation.",
+      "podcast": "Safari Stories",
+      "listeners": 22100,
+      "episodes": 156,
+      "languages": ["English", "Zulu", "Afrikaans"],
+      "signature_story": "The Great Baobab Migration",
+      "join_date": "2023-11-20"
+    }
+  ],
+  "community_stats": {
+    "total_storytellers": 247,
+    "total_episodes": 3420,
+    "total_listeners": 156800,
+    "languages_represented": 23,
+    "countries_active": 16
+  }
+}

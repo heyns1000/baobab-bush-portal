@@ -1,0 +1,261 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Senegal",
+                "location": "",
+                "baobab_count": 5000,
+                "status": "Active",
+                "tree_house_id": "senegal-001",
+                "podcast_capacity": 50,
+                "featured_podcasters": ["African Stories FM", "Dakar Discussions"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-16.474, 14.0406]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "South Africa",
+                "location": "Kruger National Park",
+                "baobab_count": 5000,
+                "status": "Active",
+                "tree_house_id": "south-africa-001",
+                "podcast_capacity": 75,
+                "featured_podcasters": ["Safari Stories", "Wildlife Chronicles"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [31.5547, -23.9884]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Zimbabwe",
+                "location": "",
+                "baobab_count": 7000,
+                "status": "Active",
+                "tree_house_id": "zimbabwe-001",
+                "podcast_capacity": 60,
+                "featured_podcasters": ["Victoria Falls Voices", "Heritage Hub"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [29.1543, -19.0154]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Tanzania",
+                "location": "",
+                "baobab_count": 4000,
+                "status": "Active",
+                "tree_house_id": "tanzania-001", 
+                "podcast_capacity": 45,
+                "featured_podcasters": ["Serengeti Sounds", "Kilimanjaro Conversations"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.292, -7.873]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Madagascar",
+                "location": "",
+                "baobab_count": 10000,
+                "status": "Reserved",
+                "tree_house_id": "madagascar-001",
+                "podcast_capacity": 100,
+                "featured_podcasters": ["Island Insights", "Lemur Legends"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [44.6449, -20.281]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Mali",
+                "location": "",
+                "baobab_count": 3500,
+                "status": "Active",
+                "tree_house_id": "mali-001",
+                "podcast_capacity": 40,
+                "featured_podcasters": ["Bambara Beats", "Sahel Stories"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-8.0029, 12.6392]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Burkina Faso",
+                "location": "",
+                "baobab_count": 4500,
+                "status": "Active",
+                "tree_house_id": "burkina-001",
+                "podcast_capacity": 50,
+                "featured_podcasters": ["Mossi Messages", "Ouagadougou Originals"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-1.561, 12.2383]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Chad",
+                "location": "",
+                "baobab_count": 1500,
+                "status": "Active",
+                "tree_house_id": "chad-001",
+                "podcast_capacity": 25,
+                "featured_podcasters": ["Lake Chad Chronicles", "N'Djamena Narratives"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.058, 12.1348]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Mauritania",
+                "location": "",
+                "baobab_count": 2000,
+                "status": "Active",
+                "tree_house_id": "mauritania-001",
+                "podcast_capacity": 30,
+                "featured_podcasters": ["Desert Dialogues", "Nomad Networks"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-13.5, 18.065]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Ivory Coast",
+                "location": "",
+                "baobab_count": 4000,
+                "status": "Active",
+                "tree_house_id": "ivory-coast-001",
+                "podcast_capacity": 45,
+                "featured_podcasters": ["Abidjan Audio", "Cocoa Conversations"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-5.5471, 9.1395]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Nigeria",
+                "location": "",
+                "baobab_count": 6000,
+                "status": "Active",
+                "tree_house_id": "nigeria-001",
+                "podcast_capacity": 80,
+                "featured_podcasters": ["Lagos Live", "Nollywood Narratives", "Afrobeat Archives"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [8.6753, 9.082]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Ghana",
+                "location": "",
+                "baobab_count": 4500,
+                "status": "Active",
+                "tree_house_id": "ghana-001",
+                "podcast_capacity": 55,
+                "featured_podcasters": ["Accra Acoustic", "Gold Coast Chronicles"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.4773, 9.1895]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Cameroon",
+                "location": "",
+                "baobab_count": 4000,
+                "status": "Active",
+                "tree_house_id": "cameroon-001",
+                "podcast_capacity": 50,
+                "featured_podcasters": ["Yaoundé Yarns", "Mount Cameroon Musings"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [10.1591, 5.6037]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Angola",
+                "location": "",
+                "baobab_count": 3000,
+                "status": "Active",
+                "tree_house_id": "angola-001",
+                "podcast_capacity": 40,
+                "featured_podcasters": ["Luanda Legends", "Diamond Discussions"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.8735, -11.2027]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Mozambique",
+                "location": "",
+                "baobab_count": 5000,
+                "status": "Active",
+                "tree_house_id": "mozambique-001",
+                "podcast_capacity": 60,
+                "featured_podcasters": ["Maputo Mic", "Indian Ocean Insights"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.5295, -18.6657]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "country": "Uganda",
+                "location": "",
+                "baobab_count": 2500,
+                "status": "Active",
+                "tree_house_id": "uganda-001",
+                "podcast_capacity": 35,
+                "featured_podcasters": ["Kampala Calls", "Mountain Gorilla Media"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.2904, 1.3733]
+            }
+        }
+    ]
+}
