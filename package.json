@@ -15,7 +15,13 @@
     "build": "tsc -p tsconfig.ai.json",
     "test": "echo \"Tests coming soon\" && exit 0"
   },
-  "keywords": ["baobab", "portal", "ai", "typescript", "foxed-has-mobiles"],
+  "keywords": [
+    "baobab",
+    "portal",
+    "ai",
+    "typescript",
+    "foxed-has-mobiles"
+  ],
   "author": "Heyns Schoeman - CodeNest",
   "license": "ISC",
   "dependencies": {
@@ -24,6 +30,7 @@
     "typescript": "^5.7.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22.0.0",
     "tsx": "^4.21.0"
   }
