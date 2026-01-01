@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "buildCommand": "cd baobab-bush-portal && npm install && npm run build",
+  "outputDirectory": "baobab-bush-portal/dist",
+  "installCommand": "cd baobab-bush-portal && npm install",
+  "framework": null
+}
