@@ -12,7 +12,7 @@
     "docs": "tsx src/doc-generator.ts",
     "commit": "tsx src/commit-helper.ts",
     "portal": "tsx src/baobab-portal.ts",
-    "build": "tsc -p tsconfig.ai.json",
+    "build": "tsc -p tsconfig.ai.json && remix vite:build",
     "test": "echo \"Tests coming soon\" && exit 0"
   },
   "keywords": [
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22.0.0",
-    "tsx": "^4.21.0"
+    "tsx": "^4.21.0",
+    "remix": "^1.21.0"
   }
 }
