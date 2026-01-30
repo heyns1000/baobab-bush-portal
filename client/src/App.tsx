@@ -19,6 +19,8 @@ import Creator from "@/pages/Creator";
 import Community from "@/pages/Community";
 import WowFactors from "@/pages/WowFactors";
 import LiveCoding from "@/pages/LiveCoding";
+import ForgotPassword from "@/pages/ForgotPassword";
+import TreehouseLanding from "@/pages/TreehouseLanding";
 import DeforestationDashboard from "@/pages/DeforestationDashboard";
 import OceanPlasticDashboard from "@/pages/OceanPlasticDashboard";
 import WaterSecurityDashboard from "@/pages/WaterSecurityDashboard";
@@ -48,6 +50,8 @@ function Router() {
       <Route path="/live-coding" component={LiveCoding} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
+      <Route path="/forgot-password" component={ForgotPassword} />
+      <Route path="/treehouse-landing" component={TreehouseLanding} />
       {isLoading || !isAuthenticated ? (
         <Route path="/dashboard" component={Landing} />
       ) : (

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from "@/components/Layout/Header";
 import Sidebar from "@/components/Layout/Sidebar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,10 +6,11 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  TrendingUp, 
-  Globe, 
-  Users, 
+import { useToast } from '@/hooks/use-toast';
+import {
+  TrendingUp,
+  Globe,
+  Users,
   Radio,
   BarChart3,
   PieChart,
@@ -29,6 +30,25 @@ import {
 export default function Analytics() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [timeRange, setTimeRange] = useState('7d');
+  const [showRegionFilter, setShowRegionFilter] = useState(false);
+  const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
+  const { toast } = useToast();
+
+  const handleFilterRegions = () => {
+    setShowRegionFilter(!showRegionFilter);
+    toast({
+      title: showRegionFilter ? "Showing all regions" : "Region filter active",
+      description: showRegionFilter ? "Displaying data from all regions" : "Select regions to filter",
+    });
+  };
+
+  const handleMapView = () => {
+    setViewMode(viewMode === 'list' ? 'map' : 'list');
+    toast({
+      title: viewMode === 'list' ? "Map View" : "List View",
+      description: viewMode === 'list' ? "Showing regional data on map" : "Showing regional data as list",
+    });
+  };
 
   // Mock analytics data
   const globalStats = {
@@ -399,13 +419,23 @@ export default function Analytics() {
                     Regional Performance
                   </h2>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="border-amber-200 hover:bg-amber-50">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className={`border-amber-200 hover:bg-amber-50 ${showRegionFilter ? 'bg-amber-100' : ''}`}
+                      onClick={handleFilterRegions}
+                    >
                       <Filter className="w-4 h-4 mr-2" />
-                      Filter Regions
+                      {showRegionFilter ? 'Clear Filter' : 'Filter Regions'}
                     </Button>
-                    <Button variant="outline" size="sm" className="border-amber-200 hover:bg-amber-50">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className={`border-amber-200 hover:bg-amber-50 ${viewMode === 'map' ? 'bg-amber-100' : ''}`}
+                      onClick={handleMapView}
+                    >
                       <MapPin className="w-4 h-4 mr-2" />
-                      Map View
+                      {viewMode === 'map' ? 'List View' : 'Map View'}
                     </Button>
                   </div>
                 </div>
