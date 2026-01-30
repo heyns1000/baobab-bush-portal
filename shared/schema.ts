@@ -96,3 +96,43 @@ export type Episode = typeof episodes.$inferSelect;
 export type EpisodeStats = typeof episodeStats.$inferSelect;
 export type TreatyLog = typeof treatyLogs.$inferSelect;
 export type SystemStatus = typeof systemStatus.$inferSelect;
+
+// Live Coding Tables
+export const codingSessions = pgTable("coding_sessions", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  prompt: text("prompt").notNull(),
+  status: varchar("status", { enum: ["active", "completed", "failed"] }).default("active"),
+  summary: text("summary"),
+  viewers: integer("viewers").default(0),
+  createdAt: timestamp("created_at").defaultNow(),
+  completedAt: timestamp("completed_at"),
+});
+
+export const generatedFiles = pgTable("generated_files", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sessionId: varchar("session_id").references(() => codingSessions.id).notNull(),
+  path: text("path").notNull(),
+  content: text("content").notNull(),
+  language: varchar("language", { length: 50 }).default("typescript"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+// Live Coding Relations
+export const codingSessionsRelations = relations(codingSessions, ({ many }) => ({
+  files: many(generatedFiles),
+}));
+
+export const generatedFilesRelations = relations(generatedFiles, ({ one }) => ({
+  session: one(codingSessions, {
+    fields: [generatedFiles.sessionId],
+    references: [codingSessions.id],
+  }),
+}));
+
+export const insertCodingSessionSchema = createInsertSchema(codingSessions).pick({
+  prompt: true,
+});
+
+export type CodingSession = typeof codingSessions.$inferSelect;
+export type GeneratedFile = typeof generatedFiles.$inferSelect;
+export type InsertCodingSession = z.infer<typeof insertCodingSessionSchema>;

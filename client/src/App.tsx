@@ -30,6 +30,7 @@ import LandDegradationDashboard from "@/pages/LandDegradationDashboard";
 import CommunityResilienceDashboard from "@/pages/CommunityResilienceDashboard";
 import EconomicEmpowermentDashboard from "@/pages/EconomicEmpowermentDashboard";
 import NotFound from "@/pages/not-found";
+import LiveCoding from "@/pages/LiveCoding";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -44,6 +45,7 @@ function Router() {
       <Route path="/creator" component={Creator} />
       <Route path="/community" component={Community} />
       <Route path="/wow-factors" component={WowFactors} />
+      <Route path="/live-coding" component={LiveCoding} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       {isLoading || !isAuthenticated ? (
