@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global View GPT - FAA.zone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terminal-bg: #0d1117;
+            --terminal-text: #c9d1d9;
+            --terminal-cyan: #39d353;
+            --terminal-green: #3fb950;
+            --terminal-blue: #58a6ff;
+            --terminal-border: #30363d;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--terminal-bg); color: var(--terminal-text); margin: 0; padding: 0; min-height: 100vh; }
+        .terminal-header { background: linear-gradient(135deg, #0d2818 0%, #1a4d2e 100%); border-bottom: 2px solid var(--terminal-cyan); padding: 1.5rem 2rem; }
+        .terminal-title { font-family: 'JetBrains Mono', monospace; color: var(--terminal-cyan); font-size: 1.5rem; font-weight: 700; }
+        .terminal-subtitle { color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem; margin-top: 0.5rem; }
+        .terminal-body { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        .region-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .region-card { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.25rem; transition: all 0.3s; cursor: pointer; }
+        .region-card:hover { border-color: var(--terminal-cyan); transform: translateY(-2px); }
+        .region-flag { font-size: 2rem; margin-bottom: 0.5rem; }
+        .region-name { color: var(--terminal-cyan); font-weight: 600; font-size: 1rem; }
+        .region-stats { color: var(--terminal-text); opacity: 0.6; font-size: 0.8rem; margin-top: 0.5rem; }
+        .map-container { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+        .map-title { color: var(--terminal-cyan); font-weight: 600; margin-bottom: 1rem; }
+        .world-map { font-size: 4rem; margin: 1rem 0; }
+        .map-legend { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .legend-dot.active { background: var(--terminal-cyan); }
+        .legend-dot.pending { background: var(--terminal-blue); }
+        .legend-dot.offline { background: #484f58; }
+        .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+        .metric-card { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 8px; padding: 1.25rem; text-align: center; }
+        .metric-value { color: var(--terminal-cyan); font-size: 2rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .metric-label { color: var(--terminal-text); opacity: 0.6; font-size: 0.8rem; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="terminal-title">🌍 Global View GPT v1.0</div>
+        <div class="terminal-subtitle">Worldwide Operations & Regional Analytics Dashboard</div>
+    </header>
+
+    <main class="terminal-body">
+        <div class="region-grid">
+            <div class="region-card">
+                <div class="region-flag">🇿🇦</div>
+                <div class="region-name">South Africa</div>
+                <div class="region-stats">Hub: Active | Nodes: 12</div>
+            </div>
+            <div class="region-card">
+                <div class="region-flag">🇳🇬</div>
+                <div class="region-name">Nigeria</div>
+                <div class="region-stats">Hub: Active | Nodes: 8</div>
+            </div>
+            <div class="region-card">
+                <div class="region-flag">🇰🇪</div>
+                <div class="region-name">Kenya</div>
+                <div class="region-stats">Hub: Active | Nodes: 6</div>
+            </div>
+            <div class="region-card">
+                <div class="region-flag">🇬🇧</div>
+                <div class="region-name">United Kingdom</div>
+                <div class="region-stats">Hub: Active | Nodes: 5</div>
+            </div>
+            <div class="region-card">
+                <div class="region-flag">🇺🇸</div>
+                <div class="region-name">United States</div>
+                <div class="region-stats">Hub: Pending | Nodes: 4</div>
+            </div>
+            <div class="region-card">
+                <div class="region-flag">🇦🇪</div>
+                <div class="region-name">UAE</div>
+                <div class="region-stats">Hub: Active | Nodes: 3</div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div class="map-title">Global Network Coverage</div>
+            <div class="world-map">🗺️</div>
+            <div class="map-legend">
+                <div class="legend-item"><div class="legend-dot active"></div> Active Hub</div>
+                <div class="legend-item"><div class="legend-dot pending"></div> Pending</div>
+                <div class="legend-item"><div class="legend-dot offline"></div> Offline</div>
+            </div>
+        </div>
+
+        <div class="metrics-row">
+            <div class="metric-card">
+                <div class="metric-value">6</div>
+                <div class="metric-label">Active Regions</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">42</div>
+                <div class="metric-label">Total Nodes</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">99.8%</div>
+                <div class="metric-label">Global Uptime</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">24ms</div>
+                <div class="metric-label">Avg Latency</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
