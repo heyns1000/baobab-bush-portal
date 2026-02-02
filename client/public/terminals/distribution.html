@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribution GPT - FAA.zone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terminal-bg: #0d1117;
+            --terminal-text: #c9d1d9;
+            --terminal-indigo: #818cf8;
+            --terminal-green: #3fb950;
+            --terminal-blue: #58a6ff;
+            --terminal-border: #30363d;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--terminal-bg); color: var(--terminal-text); margin: 0; padding: 0; min-height: 100vh; }
+        .terminal-header { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-bottom: 2px solid var(--terminal-indigo); padding: 1.5rem 2rem; }
+        .terminal-title { font-family: 'JetBrains Mono', monospace; color: var(--terminal-indigo); font-size: 1.5rem; font-weight: 700; }
+        .terminal-subtitle { color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem; margin-top: 0.5rem; }
+        .terminal-body { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        .dist-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .dist-metric { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+        .metric-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .metric-value { color: var(--terminal-indigo); font-size: 2rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .metric-label { color: var(--terminal-text); opacity: 0.6; font-size: 0.85rem; margin-top: 0.5rem; }
+        .channel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .channel-card { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; transition: all 0.3s; }
+        .channel-card:hover { border-color: var(--terminal-indigo); }
+        .channel-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .channel-title { color: var(--terminal-indigo); font-weight: 600; margin-bottom: 0.5rem; }
+        .channel-desc { color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem; }
+        .channel-stats { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--terminal-border); }
+        .stat-item { text-align: center; }
+        .stat-value { color: var(--terminal-green); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .stat-label { color: var(--terminal-text); opacity: 0.6; font-size: 0.7rem; }
+        .supply-chain { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; }
+        .chain-title { color: var(--terminal-indigo); font-weight: 600; margin-bottom: 1.5rem; }
+        .chain-flow { display: flex; align-items: center; justify-content: space-between; overflow-x: auto; padding-bottom: 1rem; }
+        .chain-node { background: linear-gradient(135deg, var(--terminal-indigo) 0%, #6366f1 100%); border-radius: 8px; padding: 1rem 1.5rem; text-align: center; min-width: 120px; }
+        .chain-node-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .chain-node-label { font-size: 0.85rem; font-weight: 500; }
+        .chain-arrow { color: var(--terminal-indigo); font-size: 1.5rem; padding: 0 0.5rem; }
+    </style>
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="terminal-title">📦 Distribution GPT v1.0</div>
+        <div class="terminal-subtitle">Supply Chain Intelligence & Channel Management</div>
+    </header>
+
+    <main class="terminal-body">
+        <div class="dist-metrics">
+            <div class="dist-metric"><div class="metric-icon">📦</div><div class="metric-value">42</div><div class="metric-label">Distribution Hubs</div></div>
+            <div class="dist-metric"><div class="metric-icon">🚚</div><div class="metric-value">156</div><div class="metric-label">Active Routes</div></div>
+            <div class="dist-metric"><div class="metric-icon">📊</div><div class="metric-value">98.7%</div><div class="metric-label">Fill Rate</div></div>
+            <div class="dist-metric"><div class="metric-icon">⏱️</div><div class="metric-value">2.4d</div><div class="metric-label">Avg Lead Time</div></div>
+        </div>
+
+        <div class="channel-grid">
+            <div class="channel-card">
+                <div class="channel-icon">🏪</div>
+                <div class="channel-title">Retail Channel</div>
+                <div class="channel-desc">Direct-to-store distribution for retail partners and franchises.</div>
+                <div class="channel-stats"><div class="stat-item"><div class="stat-value">1,240</div><div class="stat-label">Outlets</div></div><div class="stat-item"><div class="stat-value">94%</div><div class="stat-label">Coverage</div></div></div>
+            </div>
+            <div class="channel-card">
+                <div class="channel-icon">🌐</div>
+                <div class="channel-title">E-Commerce</div>
+                <div class="channel-desc">Online fulfillment and last-mile delivery network.</div>
+                <div class="channel-stats"><div class="stat-item"><div class="stat-value">8,500</div><div class="stat-label">Daily Orders</div></div><div class="stat-item"><div class="stat-value">99%</div><div class="stat-label">On-Time</div></div></div>
+            </div>
+            <div class="channel-card">
+                <div class="channel-icon">🏭</div>
+                <div class="channel-title">Wholesale</div>
+                <div class="channel-desc">Bulk distribution to wholesalers and distributors.</div>
+                <div class="channel-stats"><div class="stat-item"><div class="stat-value">320</div><div class="stat-label">Partners</div></div><div class="stat-item"><div class="stat-value">87%</div><div class="stat-label">Retention</div></div></div>
+            </div>
+        </div>
+
+        <div class="supply-chain">
+            <div class="chain-title">Supply Chain Flow</div>
+            <div class="chain-flow">
+                <div class="chain-node"><div class="chain-node-icon">🏭</div><div class="chain-node-label">Supplier</div></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-node"><div class="chain-node-icon">📦</div><div class="chain-node-label">Warehouse</div></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-node"><div class="chain-node-icon">🚚</div><div class="chain-node-label">Transport</div></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-node"><div class="chain-node-icon">🏪</div><div class="chain-node-label">Distribution</div></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-node"><div class="chain-node-icon">👤</div><div class="chain-node-label">Customer</div></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

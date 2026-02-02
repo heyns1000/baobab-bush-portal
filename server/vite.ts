@@ -41,6 +41,12 @@ export async function setupVite(app: Express, server: Server) {
   });
 
   app.use(vite.middlewares);
+
+  // Serve terminal HTML files directly (before SPA catch-all)
+  app.use('/terminals', express.static(
+    path.resolve(import.meta.dirname, '..', 'client', 'public', 'terminals')
+  ));
+
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from "@/components/Layout/Header";
 import Sidebar from "@/components/Layout/Sidebar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,11 +7,12 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Search, 
-  Sparkles, 
-  TrendingUp, 
-  Globe, 
+import { useToast } from '@/hooks/use-toast';
+import {
+  Search,
+  Sparkles,
+  TrendingUp,
+  Globe,
   Heart,
   Play,
   Bookmark,
@@ -31,6 +32,35 @@ export default function Discovery() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('All');
   const [selectedGenre, setSelectedGenre] = useState('All');
+  const [showMoreFilters, setShowMoreFilters] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
+  const { toast } = useToast();
+
+  const handleAISearch = async () => {
+    if (!searchQuery.trim()) {
+      toast({
+        title: "Enter a search query",
+        description: "Try searching for a topic, culture, or language",
+      });
+      return;
+    }
+    setIsSearching(true);
+    // Simulate AI search
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setIsSearching(false);
+    toast({
+      title: "AI Search Complete",
+      description: `Found recommendations for "${searchQuery}"`,
+    });
+  };
+
+  const handleMoreFilters = () => {
+    setShowMoreFilters(!showMoreFilters);
+    toast({
+      title: showMoreFilters ? "Filters collapsed" : "Advanced filters",
+      description: showMoreFilters ? "Showing basic filters" : "Showing all filter options",
+    });
+  };
 
   // Mock AI-powered recommendations
   const aiRecommendations = [
@@ -130,12 +160,23 @@ export default function Discovery() {
                     className="pl-12 pr-4 py-4 text-lg border-amber-200 dark:border-gray-600 focus:border-amber-400 rounded-2xl"
                     data-testid="input-smart-search"
                   />
-                  <Button 
+                  <Button
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-amber-600 hover:bg-amber-700"
                     data-testid="button-ai-search"
+                    onClick={handleAISearch}
+                    disabled={isSearching}
                   >
-                    <Sparkles className="w-5 h-5 mr-2" />
-                    AI Search
+                    {isSearching ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                        Searching...
+                      </>
+                    ) : (
+                      <>
+                        <Sparkles className="w-5 h-5 mr-2" />
+                        AI Search
+                      </>
+                    )}
                   </Button>
                 </div>
 
@@ -161,9 +202,13 @@ export default function Discovery() {
                     ))}
                   </select>
 
-                  <Button variant="outline" className="border-amber-200 hover:bg-amber-50">
+                  <Button
+                    variant="outline"
+                    className="border-amber-200 hover:bg-amber-50"
+                    onClick={handleMoreFilters}
+                  >
                     <Filter className="w-4 h-4 mr-2" />
-                    More Filters
+                    {showMoreFilters ? 'Less Filters' : 'More Filters'}
                   </Button>
                 </div>
               </div>

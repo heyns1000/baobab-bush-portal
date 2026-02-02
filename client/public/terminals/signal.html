@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal GPT - FAA.zone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terminal-bg: #0d1117;
+            --terminal-text: #c9d1d9;
+            --terminal-red: #f85149;
+            --terminal-green: #3fb950;
+            --terminal-yellow: #d29922;
+            --terminal-blue: #58a6ff;
+            --terminal-border: #30363d;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--terminal-bg); color: var(--terminal-text); margin: 0; padding: 0; min-height: 100vh; }
+        .terminal-header { background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%); border-bottom: 2px solid var(--terminal-red); padding: 1.5rem 2rem; }
+        .terminal-title { font-family: 'JetBrains Mono', monospace; color: var(--terminal-red); font-size: 1.5rem; font-weight: 700; }
+        .terminal-subtitle { color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem; margin-top: 0.5rem; }
+        .terminal-body { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        .security-dashboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .security-metric { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 8px; padding: 1.25rem; text-align: center; }
+        .security-metric-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .security-metric-value { color: var(--terminal-green); font-size: 1.75rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .security-metric-value.warning { color: var(--terminal-yellow); }
+        .security-metric-label { color: var(--terminal-text); opacity: 0.6; font-size: 0.75rem; margin-top: 0.25rem; }
+        .signal-monitor { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+        .signal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .signal-title { color: var(--terminal-red); font-weight: 600; }
+        .signal-status { display: flex; align-items: center; gap: 0.5rem; color: var(--terminal-green); font-size: 0.85rem; }
+        .status-dot { width: 8px; height: 8px; background: var(--terminal-green); border-radius: 50%; animation: blink 1s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .log-container { background: #0d1117; border: 1px solid var(--terminal-border); border-radius: 8px; padding: 1rem; max-height: 300px; overflow-y: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+        .log-entry { padding: 0.5rem 0; border-bottom: 1px solid var(--terminal-border); display: flex; gap: 1rem; }
+        .log-entry:last-child { border-bottom: none; }
+        .log-time { color: var(--terminal-text); opacity: 0.5; min-width: 80px; }
+        .log-level { min-width: 60px; font-weight: 600; }
+        .log-level.info { color: var(--terminal-blue); }
+        .log-level.success { color: var(--terminal-green); }
+        .log-level.warning { color: var(--terminal-yellow); }
+        .log-level.error { color: var(--terminal-red); }
+        .log-message { color: var(--terminal-text); }
+        .protocol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .protocol-card { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; transition: all 0.3s; }
+        .protocol-card:hover { border-color: var(--terminal-red); }
+        .protocol-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .protocol-icon { font-size: 2rem; }
+        .protocol-title { color: var(--terminal-red); font-weight: 600; }
+        .protocol-status { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-top: 1rem; }
+        .status-active { background: rgba(63, 185, 80, 0.2); color: var(--terminal-green); }
+        .status-monitoring { background: rgba(88, 166, 255, 0.2); color: var(--terminal-blue); }
+    </style>
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="terminal-title">🔐 Signal GPT v1.0</div>
+        <div class="terminal-subtitle">Security Intelligence & Threat Monitoring System</div>
+    </header>
+
+    <main class="terminal-body">
+        <div class="security-dashboard">
+            <div class="security-metric"><div class="security-metric-icon">🛡️</div><div class="security-metric-value">99.97%</div><div class="security-metric-label">System Uptime</div></div>
+            <div class="security-metric"><div class="security-metric-icon">🔒</div><div class="security-metric-value">0</div><div class="security-metric-label">Active Threats</div></div>
+            <div class="security-metric"><div class="security-metric-icon">📡</div><div class="security-metric-value">42</div><div class="security-metric-label">Monitored Nodes</div></div>
+            <div class="security-metric"><div class="security-metric-icon">🔐</div><div class="security-metric-value warning">3</div><div class="security-metric-label">Pending Audits</div></div>
+        </div>
+
+        <div class="signal-monitor">
+            <div class="signal-header"><span class="signal-title">Security Event Log</span><div class="signal-status"><span class="status-dot"></span><span>Live</span></div></div>
+            <div class="log-container">
+                <div class="log-entry"><span class="log-time">14:32:01</span><span class="log-level success">SUCCESS</span><span class="log-message">OmniSignal verification complete - Node ZA-CPT-01</span></div>
+                <div class="log-entry"><span class="log-time">14:31:45</span><span class="log-level info">INFO</span><span class="log-message">ScrollClaim signature validated - Claim #SC-7832</span></div>
+                <div class="log-entry"><span class="log-time">14:31:22</span><span class="log-level success">SUCCESS</span><span class="log-message">PulseGrid sync completed - 42 nodes synchronized</span></div>
+                <div class="log-entry"><span class="log-time">14:30:58</span><span class="log-level warning">WARNING</span><span class="log-message">High traffic detected on API endpoint /api/vault</span></div>
+                <div class="log-entry"><span class="log-time">14:30:15</span><span class="log-level info">INFO</span><span class="log-message">GhostTrace audit initiated - Session #GT-9921</span></div>
+                <div class="log-entry"><span class="log-time">14:29:42</span><span class="log-level success">SUCCESS</span><span class="log-message">SSL certificate renewed - *.faa.zone</span></div>
+            </div>
+        </div>
+
+        <div class="protocol-grid">
+            <div class="protocol-card"><div class="protocol-header"><span class="protocol-icon">🔐</span><span class="protocol-title">OmniSignal</span></div><p style="color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem;">Global scroll verification and authentication protocol</p><span class="protocol-status status-active">Active</span></div>
+            <div class="protocol-card"><div class="protocol-header"><span class="protocol-icon">👻</span><span class="protocol-title">GhostTrace Gen2</span></div><p style="color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem;">Scroll interaction backtrace and forensic audit</p><span class="protocol-status status-monitoring">Monitoring</span></div>
+            <div class="protocol-card"><div class="protocol-header"><span class="protocol-icon">🛡️</span><span class="protocol-title">VaultShield</span></div><p style="color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem;">Advanced threat detection and prevention</p><span class="protocol-status status-active">Active</span></div>
+            <div class="protocol-card"><div class="protocol-header"><span class="protocol-icon">🔑</span><span class="protocol-title">ClaimRoot</span></div><p style="color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem;">Origin anchor and timestamp verification</p><span class="protocol-status status-active">Active</span></div>
+        </div>
+    </main>
+</body>
+</html>

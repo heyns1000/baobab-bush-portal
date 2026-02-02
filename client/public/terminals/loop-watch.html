@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Watch GPT - FAA.zone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terminal-bg: #0d1117;
+            --terminal-text: #c9d1d9;
+            --terminal-teal: #2dd4bf;
+            --terminal-green: #3fb950;
+            --terminal-blue: #58a6ff;
+            --terminal-border: #30363d;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--terminal-bg); color: var(--terminal-text); margin: 0; padding: 0; min-height: 100vh; }
+        .terminal-header { background: linear-gradient(135deg, #0d1f1a 0%, #134e4a 100%); border-bottom: 2px solid var(--terminal-teal); padding: 1.5rem 2rem; }
+        .terminal-title { font-family: 'JetBrains Mono', monospace; color: var(--terminal-teal); font-size: 1.5rem; font-weight: 700; }
+        .terminal-subtitle { color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem; margin-top: 0.5rem; }
+        .terminal-body { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        .loop-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .loop-metric { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+        .metric-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .metric-value { color: var(--terminal-teal); font-size: 2rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .metric-label { color: var(--terminal-text); opacity: 0.6; font-size: 0.85rem; margin-top: 0.5rem; }
+        .cycle-tracker { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+        .cycle-title { color: var(--terminal-teal); font-weight: 600; margin-bottom: 1.5rem; }
+        .cycle-flow { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .cycle-node { background: #0d1117; border: 2px solid var(--terminal-teal); border-radius: 50%; width: 80px; height: 80px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .cycle-node-icon { font-size: 1.5rem; }
+        .cycle-node-label { font-size: 0.7rem; margin-top: 0.25rem; color: var(--terminal-text); opacity: 0.8; }
+        .cycle-arrow { color: var(--terminal-teal); font-size: 1.5rem; }
+        .impact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .impact-card { background: #161b22; border: 1px solid var(--terminal-border); border-radius: 12px; padding: 1.5rem; transition: all 0.3s; }
+        .impact-card:hover { border-color: var(--terminal-teal); }
+        .impact-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .impact-title { color: var(--terminal-teal); font-weight: 600; margin-bottom: 0.5rem; }
+        .impact-desc { color: var(--terminal-text); opacity: 0.7; font-size: 0.9rem; line-height: 1.5; }
+        .impact-stat { display: flex; justify-content: space-between; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--terminal-border); }
+        .stat-item { text-align: center; }
+        .stat-value { color: var(--terminal-green); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .stat-label { color: var(--terminal-text); opacity: 0.6; font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="terminal-title">♻️ Loop Watch GPT v1.0</div>
+        <div class="terminal-subtitle">Circular Economy & Sustainability Monitoring System</div>
+    </header>
+
+    <main class="terminal-body">
+        <div class="loop-metrics">
+            <div class="loop-metric"><div class="metric-icon">♻️</div><div class="metric-value">87%</div><div class="metric-label">Recycling Rate</div></div>
+            <div class="loop-metric"><div class="metric-icon">🌱</div><div class="metric-value">2.4K</div><div class="metric-label">Trees Saved</div></div>
+            <div class="loop-metric"><div class="metric-icon">💧</div><div class="metric-value">156K</div><div class="metric-label">Liters Conserved</div></div>
+            <div class="loop-metric"><div class="metric-icon">⚡</div><div class="metric-value">42%</div><div class="metric-label">Energy Reduced</div></div>
+        </div>
+
+        <div class="cycle-tracker">
+            <div class="cycle-title">Material Loop Cycle</div>
+            <div class="cycle-flow">
+                <div class="cycle-node"><div class="cycle-node-icon">📦</div><div class="cycle-node-label">Collect</div></div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-node"><div class="cycle-node-icon">🔄</div><div class="cycle-node-label">Sort</div></div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-node"><div class="cycle-node-icon">⚙️</div><div class="cycle-node-label">Process</div></div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-node"><div class="cycle-node-icon">🏭</div><div class="cycle-node-label">Manufacture</div></div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-node"><div class="cycle-node-icon">🛒</div><div class="cycle-node-label">Distribute</div></div>
+            </div>
+        </div>
+
+        <div class="impact-cards">
+            <div class="impact-card">
+                <div class="impact-icon">🌍</div>
+                <div class="impact-title">Carbon Footprint</div>
+                <div class="impact-desc">Track and reduce carbon emissions across the entire supply chain.</div>
+                <div class="impact-stat"><div class="stat-item"><div class="stat-value">-34%</div><div class="stat-label">YoY Reduction</div></div><div class="stat-item"><div class="stat-value">12K</div><div class="stat-label">Tons CO2</div></div></div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🗑️</div>
+                <div class="impact-title">Zero Waste</div>
+                <div class="impact-desc">Monitor waste diversion and landfill reduction metrics.</div>
+                <div class="impact-stat"><div class="stat-item"><div class="stat-value">92%</div><div class="stat-label">Diversion Rate</div></div><div class="stat-item"><div class="stat-value">8K</div><div class="stat-label">Tons Diverted</div></div></div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🔋</div>
+                <div class="impact-title">Energy Recovery</div>
+                <div class="impact-desc">Convert waste materials into renewable energy sources.</div>
+                <div class="impact-stat"><div class="stat-item"><div class="stat-value">156</div><div class="stat-label">MWh Generated</div></div><div class="stat-item"><div class="stat-value">78%</div><div class="stat-label">Efficiency</div></div></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

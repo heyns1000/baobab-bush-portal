@@ -3,7 +3,9 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth, isAuthenticated } from "./replitAuth";
 import { dataService } from "./services/dataService";
-import { 
+import { streamCodeGeneration, getSession, getAllSessions } from "./services/liveCodingService";
+import { sendWelcomeEmail, createLicense } from "./services/emailService";
+import {
   insertEnvironmentalDataSchema,
   insertAlertSchema,
   insertCustomAlertSchema,
@@ -219,6 +221,115 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("Error fetching latest data:", error);
       res.status(500).json({ message: "Failed to fetch latest data" });
     }
+  });
+
+  // ==========================================
+  // Live AI Coding Routes
+  // ==========================================
+
+  // Get all coding sessions
+  app.get('/api/live-coding/sessions', async (req, res) => {
+    try {
+      const sessions = getAllSessions().map(s => ({
+        id: s.id,
+        prompt: s.prompt,
+        status: s.status,
+        fileCount: s.files.length,
+        startedAt: s.startedAt,
+        completedAt: s.completedAt,
+      }));
+      res.json(sessions);
+    } catch (error) {
+      console.error("Error fetching sessions:", error);
+      res.status(500).json({ message: "Failed to fetch sessions" });
+    }
+  });
+
+  // Get specific session
+  app.get('/api/live-coding/sessions/:id', async (req, res) => {
+    try {
+      const session = getSession(req.params.id);
+      if (!session) {
+        return res.status(404).json({ message: "Session not found" });
+      }
+      res.json(session);
+    } catch (error) {
+      console.error("Error fetching session:", error);
+      res.status(500).json({ message: "Failed to fetch session" });
+    }
+  });
+
+  // Start coding session (non-streaming, for REST API)
+  app.post('/api/live-coding/generate', async (req, res) => {
+    try {
+      const { prompt } = req.body;
+      if (!prompt) {
+        return res.status(400).json({ message: "Prompt is required" });
+      }
+
+      const sessionId = `api-${Date.now()}`;
+      const files: any[] = [];
+
+      for await (const event of streamCodeGeneration(sessionId, prompt)) {
+        if (event.type === 'file') {
+          files.push(JSON.parse(event.content));
+        }
+      }
+
+      res.json({ sessionId, files, fileCount: files.length });
+    } catch (error) {
+      console.error("Error generating code:", error);
+      res.status(500).json({ message: "Failed to generate code" });
+    }
+  });
+
+  // ==========================================
+  // License and Email Routes
+  // ==========================================
+
+  // Register with license
+  app.post('/api/auth/register-with-license', async (req, res) => {
+    try {
+      const { email, name, tier = 'free' } = req.body;
+
+      if (!email || !name) {
+        return res.status(400).json({ message: "Email and name are required" });
+      }
+
+      const userId = `user-${Date.now()}`;
+      const license = createLicense(userId, email, tier as 'free' | 'pro' | 'enterprise');
+
+      // Send welcome email with license
+      const emailResult = await sendWelcomeEmail(email, name, license);
+
+      res.json({
+        success: true,
+        userId,
+        license: {
+          key: license.key,
+          tier: license.tier,
+          features: license.features,
+          expiresAt: license.expiresAt,
+        },
+        emailSent: emailResult.success,
+      });
+    } catch (error) {
+      console.error("Error registering with license:", error);
+      res.status(500).json({ message: "Failed to register" });
+    }
+  });
+
+  // System status
+  app.get('/api/system-status', async (req, res) => {
+    res.json({
+      status: 'active',
+      vaultPulse: 'MAXIMUM',
+      nodes: 42,
+      signal: 'continental',
+      version: 'vs111.111',
+      liveCoding: 'ready',
+      email: process.env.SMTP_HOST ? 'configured' : 'not_configured',
+    });
   });
 
   const httpServer = createServer(app);
