@@ -5,11 +5,17 @@ import { setupAuth, isAuthenticated } from "./replitAuth";
 import { dataService } from "./services/dataService";
 import { streamCodeGeneration, getSession, getAllSessions } from "./services/liveCodingService";
 import { sendWelcomeEmail, createLicense } from "./services/emailService";
+import { tradeService } from "./services/tradeService";
+import { currencyService } from "./services/currencyService";
 import {
   insertEnvironmentalDataSchema,
   insertAlertSchema,
   insertCustomAlertSchema,
-  insertReportSchema
+  insertReportSchema,
+  insertTradeBrandSchema,
+  insertTradeSubnodeSchema,
+  insertVendorSchema,
+  insertVendorItemSchema,
 } from "@shared/schema";
 import { z } from "zod";
 
@@ -330,6 +336,241 @@ export async function registerRoutes(app: Express): Promise<Server> {
       liveCoding: 'ready',
       email: process.env.SMTP_HOST ? 'configured' : 'not_configured',
     });
+  });
+
+  // ==========================================
+  // Trade System Routes
+  // ==========================================
+
+  // Trade Brands
+  app.get('/api/trade/brands', async (req, res) => {
+    try {
+      const brands = await tradeService.getAllBrandsWithSubnodes();
+      res.json(brands);
+    } catch (error) {
+      console.error("Error fetching trade brands:", error);
+      res.status(500).json({ message: "Failed to fetch trade brands" });
+    }
+  });
+
+  app.get('/api/trade/brands/:id', async (req, res) => {
+    try {
+      const brand = await tradeService.getBrandWithSubnodes(req.params.id);
+      if (!brand) {
+        return res.status(404).json({ message: "Brand not found" });
+      }
+      res.json(brand);
+    } catch (error) {
+      console.error("Error fetching brand:", error);
+      res.status(500).json({ message: "Failed to fetch brand" });
+    }
+  });
+
+  app.post('/api/trade/brands', isAuthenticated, async (req, res) => {
+    try {
+      const brandData = insertTradeBrandSchema.parse(req.body);
+      const brand = await tradeService.createBrand(brandData);
+      res.status(201).json(brand);
+    } catch (error) {
+      console.error("Error creating brand:", error);
+      res.status(500).json({ message: "Failed to create brand" });
+    }
+  });
+
+  // Trade Subnodes
+  app.get('/api/trade/subnodes', async (req, res) => {
+    try {
+      const subnodes = await tradeService.getAllSubnodes();
+      res.json(subnodes);
+    } catch (error) {
+      console.error("Error fetching subnodes:", error);
+      res.status(500).json({ message: "Failed to fetch subnodes" });
+    }
+  });
+
+  app.get('/api/trade/subnodes/brand/:brandId', async (req, res) => {
+    try {
+      const subnodes = await tradeService.getSubnodesByBrand(req.params.brandId);
+      res.json(subnodes);
+    } catch (error) {
+      console.error("Error fetching subnodes:", error);
+      res.status(500).json({ message: "Failed to fetch subnodes" });
+    }
+  });
+
+  // Vendors
+  app.get('/api/vendors', async (req, res) => {
+    try {
+      const { category, brandId, status } = req.query;
+      const vendors = await tradeService.getAllVendors({
+        category: category as string,
+        brandId: brandId as string,
+        status: status as string,
+      });
+      res.json(vendors);
+    } catch (error) {
+      console.error("Error fetching vendors:", error);
+      res.status(500).json({ message: "Failed to fetch vendors" });
+    }
+  });
+
+  app.get('/api/vendors/:slug', async (req, res) => {
+    try {
+      const vendor = await tradeService.getVendorBySlug(req.params.slug);
+      if (!vendor) {
+        return res.status(404).json({ message: "Vendor not found" });
+      }
+      res.json(vendor);
+    } catch (error) {
+      console.error("Error fetching vendor:", error);
+      res.status(500).json({ message: "Failed to fetch vendor" });
+    }
+  });
+
+  app.post('/api/vendors', isAuthenticated, async (req, res) => {
+    try {
+      const vendorData = insertVendorSchema.parse(req.body);
+      const vendor = await tradeService.createVendor(vendorData);
+      res.status(201).json(vendor);
+    } catch (error) {
+      console.error("Error creating vendor:", error);
+      res.status(500).json({ message: "Failed to create vendor" });
+    }
+  });
+
+  app.patch('/api/vendors/:id', isAuthenticated, async (req, res) => {
+    try {
+      const vendorId = parseInt(req.params.id);
+      const vendor = await tradeService.updateVendor(vendorId, req.body);
+      if (!vendor) {
+        return res.status(404).json({ message: "Vendor not found" });
+      }
+      res.json(vendor);
+    } catch (error) {
+      console.error("Error updating vendor:", error);
+      res.status(500).json({ message: "Failed to update vendor" });
+    }
+  });
+
+  app.delete('/api/vendors/:id', isAuthenticated, async (req, res) => {
+    try {
+      const vendorId = parseInt(req.params.id);
+      await tradeService.deleteVendor(vendorId);
+      res.json({ message: "Vendor deleted" });
+    } catch (error) {
+      console.error("Error deleting vendor:", error);
+      res.status(500).json({ message: "Failed to delete vendor" });
+    }
+  });
+
+  // Vendor Items
+  app.get('/api/vendors/:id/items', async (req, res) => {
+    try {
+      const vendorId = parseInt(req.params.id);
+      const { currency = 'USD' } = req.query;
+
+      if (currency !== 'USD') {
+        const items = await tradeService.getItemsByVendorWithLocalPricing(
+          vendorId,
+          currency as string
+        );
+        res.json(items);
+      } else {
+        const items = await tradeService.getItemsByVendor(vendorId);
+        res.json(items);
+      }
+    } catch (error) {
+      console.error("Error fetching vendor items:", error);
+      res.status(500).json({ message: "Failed to fetch vendor items" });
+    }
+  });
+
+  app.post('/api/vendors/:id/items', isAuthenticated, async (req, res) => {
+    try {
+      const vendorId = parseInt(req.params.id);
+      const itemData = insertVendorItemSchema.parse({ ...req.body, vendorId });
+      const item = await tradeService.createItem(itemData);
+      res.status(201).json(item);
+    } catch (error) {
+      console.error("Error creating item:", error);
+      res.status(500).json({ message: "Failed to create item" });
+    }
+  });
+
+  app.patch('/api/items/:id', isAuthenticated, async (req, res) => {
+    try {
+      const itemId = parseInt(req.params.id);
+      const item = await tradeService.updateItem(itemId, req.body);
+      if (!item) {
+        return res.status(404).json({ message: "Item not found" });
+      }
+      res.json(item);
+    } catch (error) {
+      console.error("Error updating item:", error);
+      res.status(500).json({ message: "Failed to update item" });
+    }
+  });
+
+  app.delete('/api/items/:id', isAuthenticated, async (req, res) => {
+    try {
+      const itemId = parseInt(req.params.id);
+      await tradeService.deleteItem(itemId);
+      res.json({ message: "Item deleted" });
+    } catch (error) {
+      console.error("Error deleting item:", error);
+      res.status(500).json({ message: "Failed to delete item" });
+    }
+  });
+
+  // Currency Exchange
+  app.get('/api/exchange/rates', async (req, res) => {
+    try {
+      const rates = await currencyService.getCachedRates();
+      res.json(rates);
+    } catch (error) {
+      console.error("Error fetching exchange rates:", error);
+      res.status(500).json({ message: "Failed to fetch exchange rates" });
+    }
+  });
+
+  app.get('/api/exchange/convert', async (req, res) => {
+    try {
+      const { amount, from = 'USD', to } = req.query;
+
+      if (!amount || !to) {
+        return res.status(400).json({ message: "amount and to parameters are required" });
+      }
+
+      const conversion = await currencyService.convert(
+        parseFloat(amount as string),
+        from as string,
+        to as string
+      );
+      res.json(conversion);
+    } catch (error) {
+      console.error("Error converting currency:", error);
+      res.status(500).json({ message: "Failed to convert currency" });
+    }
+  });
+
+  app.post('/api/exchange/refresh', isAuthenticated, async (req, res) => {
+    try {
+      await currencyService.refreshRates();
+      res.json({ message: "Exchange rates refreshed" });
+    } catch (error) {
+      console.error("Error refreshing exchange rates:", error);
+      res.status(500).json({ message: "Failed to refresh exchange rates" });
+    }
+  });
+
+  app.get('/api/exchange/currencies', async (req, res) => {
+    try {
+      const currencies = await currencyService.getSupportedCurrencies();
+      res.json(currencies);
+    } catch (error) {
+      console.error("Error fetching currencies:", error);
+      res.status(500).json({ message: "Failed to fetch currencies" });
+    }
   });
 
   const httpServer = createServer(app);

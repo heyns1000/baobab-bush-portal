@@ -216,3 +216,6 @@ export type InsertCustomAlert = typeof customAlerts.$inferInsert;
 export type Report = typeof reports.$inferSelect;
 export type InsertReport = typeof reports.$inferInsert;
 export type DataSourceStatus = typeof dataSourceStatus.$inferSelect;
+
+// Re-export trade schema
+export * from "./trade-schema";
