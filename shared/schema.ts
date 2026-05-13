@@ -4,16 +4,51 @@ import { relations } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-// Users table for authentication
+// Users table — OAuth-compatible, backwards-compatible with Replit fields
 export const users = pgTable("users", {
-  id: varchar("id").primaryKey(),
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   email: text("email").unique(),
+  // Replit-compat fields (kept for existing data)
   firstName: text("first_name"),
   lastName: text("last_name"),
   profileImageUrl: text("profile_image_url"),
+  // OAuth fields
+  username: text("username"),
+  password: text("password").default(''),
+  oauthProvider: text("oauth_provider"),
+  oauthId: text("oauth_id"),
+  avatar: text("avatar"),
+  role: varchar("role", { enum: ["user", "admin", "kiosk_operator"] }).default("user"),
+  kioskLocation: text("kiosk_location"),
+  lastLogin: timestamp("last_login"),
+  // Shared
   preferences: jsonb("preferences").default({}),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+// Kiosk device sessions
+export const userSessions = pgTable("user_sessions", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  userId: varchar("user_id").references(() => users.id).notNull(),
+  deviceId: text("device_id").notNull(),
+  sessionToken: text("session_token").notNull().unique(),
+  expiresAt: timestamp("expires_at").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+// Kiosk live order tracking
+export const kioskOrders = pgTable("kiosk_orders", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  userId: varchar("user_id").references(() => users.id).notNull(),
+  kioskId: text("kiosk_id").notNull(),
+  orderNumber: text("order_number").notNull().unique(),
+  items: text("items").notNull(),
+  totalAmount: decimal("total_amount", { precision: 10, scale: 2 }).notNull(),
+  status: varchar("status", { enum: ["pending", "preparing", "ready", "completed", "cancelled"] }).default("pending"),
+  paymentMethod: text("payment_method"),
+  createdAt: timestamp("created_at").defaultNow(),
+  completedAt: timestamp("completed_at"),
 });
 
 // Environmental data table
@@ -204,9 +239,25 @@ export type EpisodeStats = typeof episodeStats.$inferSelect;
 export type TreatyLog = typeof treatyLogs.$inferSelect;
 export type SystemStatus = typeof systemStatus.$inferSelect;
 
-// New table types
+// User relations
+export const usersRelations = relations(users, ({ many }) => ({
+  sessions: many(userSessions),
+  orders: many(kioskOrders),
+}));
+
+export const userSessionsRelations = relations(userSessions, ({ one }) => ({
+  user: one(users, { fields: [userSessions.userId], references: [users.id] }),
+}));
+
+export const kioskOrdersRelations = relations(kioskOrders, ({ one }) => ({
+  user: one(users, { fields: [kioskOrders.userId], references: [users.id] }),
+}));
+
+// Table types
 export type User = typeof users.$inferSelect;
 export type UpsertUser = typeof users.$inferInsert;
+export type UserSession = typeof userSessions.$inferSelect;
+export type KioskOrder = typeof kioskOrders.$inferSelect;
 export type EnvironmentalData = typeof environmentalData.$inferSelect;
 export type InsertEnvironmentalData = typeof environmentalData.$inferInsert;
 export type Alert = typeof alerts.$inferSelect;

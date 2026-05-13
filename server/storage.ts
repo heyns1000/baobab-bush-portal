@@ -5,6 +5,10 @@ import {
   customAlerts,
   reports,
   dataSourceStatus,
+  episodes,
+  episodeStats,
+  treatyLogs,
+  systemStatus,
   type User,
   type UpsertUser,
   type EnvironmentalData,
@@ -16,6 +20,11 @@ import {
   type Report,
   type InsertReport,
   type DataSourceStatus,
+  type Episode,
+  type EpisodeStats,
+  type TreatyLog,
+  type SystemStatus,
+  type InsertEpisode,
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, desc, and, gte, lte, inArray } from "drizzle-orm";
@@ -61,6 +70,27 @@ export interface IStorage {
   getDataSourceStatuses(): Promise<DataSourceStatus[]>;
   getDataSourceStatus(name: string): Promise<DataSourceStatus | undefined>;
   updateDataSourceStatus(name: string, status: string, errorMessage?: string | null): Promise<void>;
+
+  // Episode operations
+  getEpisodes(): Promise<Episode[]>;
+  getEpisode(id: string): Promise<Episode | undefined>;
+  createEpisode(episode: InsertEpisode): Promise<Episode>;
+  updateEpisode(id: string, episode: Partial<InsertEpisode>): Promise<Episode | undefined>;
+  deleteEpisode(id: string): Promise<boolean>;
+
+  // Episode stats operations
+  getEpisodeStats(episodeId: string): Promise<EpisodeStats | undefined>;
+  getAllEpisodeStats(): Promise<EpisodeStats[]>;
+  updateEpisodeStats(episodeId: string, stats: Partial<Omit<EpisodeStats, 'id' | 'episodeId' | 'createdAt' | 'updatedAt'>>): Promise<EpisodeStats>;
+
+  // Treaty log operations
+  getTreatyLogs(limit?: number): Promise<TreatyLog[]>;
+  createTreatyLog(log: Omit<TreatyLog, 'id' | 'timestamp'>): Promise<TreatyLog>;
+  clearTreatyLogs(): Promise<void>;
+
+  // System status operations
+  getSystemStatus(): Promise<SystemStatus>;
+  updateSystemStatus(status: Partial<Omit<SystemStatus, 'id' | 'updatedAt'>>): Promise<SystemStatus>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -290,17 +320,129 @@ export class DatabaseStorage implements IStorage {
       .values({
         name,
         status,
-        lastUpdated: new Date(),
+        lastSync: new Date(),
         errorMessage,
       })
       .onConflictDoUpdate({
         target: dataSourceStatus.name,
         set: {
           status,
-          lastUpdated: new Date(),
+          lastSync: new Date(),
           errorMessage,
         },
       });
+  }
+}
+
+  // Episode operations
+  async getEpisodes(): Promise<Episode[]> {
+    return await db.select().from(episodes).orderBy(desc(episodes.createdAt));
+  }
+
+  async getEpisode(id: string): Promise<Episode | undefined> {
+    const [episode] = await db.select().from(episodes).where(eq(episodes.id, id));
+    return episode || undefined;
+  }
+
+  async createEpisode(insertEpisode: InsertEpisode): Promise<Episode> {
+    const [episode] = await db.insert(episodes).values(insertEpisode).returning();
+    await db.insert(episodeStats).values({
+      episodeId: episode.id,
+      plays: 0,
+      downloads: 0,
+      signalStrength: "0",
+    });
+    return episode;
+  }
+
+  async updateEpisode(id: string, updateData: Partial<InsertEpisode>): Promise<Episode | undefined> {
+    const [updated] = await db
+      .update(episodes)
+      .set({ ...updateData, updatedAt: new Date() })
+      .where(eq(episodes.id, id))
+      .returning();
+    return updated || undefined;
+  }
+
+  async deleteEpisode(id: string): Promise<boolean> {
+    await db.delete(episodeStats).where(eq(episodeStats.episodeId, id));
+    const result = await db.delete(episodes).where(eq(episodes.id, id));
+    return (result.rowCount || 0) > 0;
+  }
+
+  // Episode stats operations
+  async getEpisodeStats(episodeId: string): Promise<EpisodeStats | undefined> {
+    const [stats] = await db.select().from(episodeStats).where(eq(episodeStats.episodeId, episodeId));
+    return stats || undefined;
+  }
+
+  async getAllEpisodeStats(): Promise<EpisodeStats[]> {
+    return await db.select().from(episodeStats).orderBy(desc(episodeStats.updatedAt));
+  }
+
+  async updateEpisodeStats(episodeId: string, statsUpdate: Partial<Omit<EpisodeStats, 'id' | 'episodeId' | 'createdAt' | 'updatedAt'>>): Promise<EpisodeStats> {
+    const existing = await this.getEpisodeStats(episodeId);
+    if (!existing) {
+      const [created] = await db.insert(episodeStats).values({
+        episodeId,
+        plays: 0,
+        downloads: 0,
+        signalStrength: "0",
+        ...statsUpdate,
+      }).returning();
+      return created;
+    }
+    const [updated] = await db
+      .update(episodeStats)
+      .set({ ...statsUpdate, updatedAt: new Date() })
+      .where(eq(episodeStats.episodeId, episodeId))
+      .returning();
+    return updated;
+  }
+
+  // Treaty log operations
+  async getTreatyLogs(limit: number = 50): Promise<TreatyLog[]> {
+    return await db.select().from(treatyLogs).orderBy(desc(treatyLogs.timestamp)).limit(limit);
+  }
+
+  async createTreatyLog(insertLog: Omit<TreatyLog, 'id' | 'timestamp'>): Promise<TreatyLog> {
+    const [log] = await db.insert(treatyLogs).values(insertLog).returning();
+    return log;
+  }
+
+  async clearTreatyLogs(): Promise<void> {
+    await db.delete(treatyLogs);
+  }
+
+  // System status operations
+  async getSystemStatus(): Promise<SystemStatus> {
+    const [status] = await db.select().from(systemStatus).orderBy(desc(systemStatus.updatedAt)).limit(1);
+    if (!status) {
+      const [newStatus] = await db.insert(systemStatus).values({
+        sovereignStatus: "ACTIVE",
+        feedDrift: "2.1",
+        lastDrop: new Date(),
+        vaultPulse: "●●●○○",
+        activePlays: 0,
+        downloadsPerHour: 12,
+        signalStrength: "94.7",
+        listeners: 3,
+        uptime: "2d 14h 33m",
+        connections: 8,
+      }).returning();
+      return newStatus;
+    }
+    return status;
+  }
+
+  async updateSystemStatus(statusUpdate: Partial<Omit<SystemStatus, 'id' | 'updatedAt'>>): Promise<SystemStatus> {
+    const currentStatus = await this.getSystemStatus();
+    const [updated] = await db
+      .update(systemStatus)
+      .set({ ...statusUpdate, updatedAt: new Date() })
+      .where(eq(systemStatus.id, currentStatus.id))
+      .returning();
+    return updated;
   }
 }
 
